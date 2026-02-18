@@ -455,7 +455,7 @@
   <div class="intro-box">
     <div class="intro-icon">🧬</div>
     <div class="intro-title">NeuroGenesis Lab</div>
-    <p class="intro-desc">Zaawansowany symulator ekosystemu ewolucyjnego z algorytmem genetycznym, sieciami neuronowymi i pełną wizualizacją procesu.</p>
+    <p class="intro-desc">Zaawansowany symulator ekosystemu ewolucyjnego z algorytmem genetycznym, sieciami neuronowymi i pełną wizualizacją procesu — działa w 100% w przeglądarce.</p>
     <div class="intro-feats">
       <div class="feat"><span class="fi">🧠</span>Sieci neuronowe sterujące ruchem</div>
       <div class="feat"><span class="fi">🧬</span>12-genowy DNA z mutacją</div>
@@ -653,24 +653,63 @@
 </div>
 
 <script>
-<script>
   // ==========================================
-  // ETAP 1: KONFIGURACJA ŚRODOWISKA I FIZYKI
+  // ETAP 1 & 2: ŚRODOWISKO, FIZYKA, JEDZENIE, METABOLIZM
   // ==========================================
 
-  // 1. Pobieranie głównego płótna (canvas)
+  // Pobieranie referencji do UI i Canvasa
   const canvas = document.getElementById('worldCanvas');
   const ctx = canvas.getContext('2d');
+  
+  const uiFps = document.getElementById('cFPS');
+  const uiPop = document.getElementById('popEl');
+  const uiDeath = document.getElementById('deathEl');
+  const uiTick = document.getElementById('tickEl');
 
-  // 2. Dopasowanie rozmiaru canvasa do jego kontenera
+  // Dopasowanie rozmiaru płótna
   function resizeCanvas() {
     canvas.width = canvas.parentElement.clientWidth;
     canvas.height = canvas.parentElement.clientHeight;
   }
   window.addEventListener('resize', resizeCanvas);
-  resizeCanvas(); // Wywołanie początkowe
+  // Początkowe wymuszenie odpowiedniego rozmiaru (wymaga małego opóźnienia, aby CSS się załadował)
+  setTimeout(resizeCanvas, 50);
 
-  // 3. Podstawowa klasa Organizmu
+  // Zmienne globalne symulacji
+  let ticks = 0;
+  let totalDeaths = 0;
+  let organisms = [];
+  let foods = [];
+
+  // Funkcje pomocnicze pobierające wartości z lewego panelu na żywo
+  const getFriction = () => parseFloat(document.getElementById('sFriction').value);
+  const getFoodEnergy = () => parseFloat(document.getElementById('sFoodEnergy').value);
+
+  // ------------------------------------------------
+  // Klasa Food (Jedzenie)
+  // ------------------------------------------------
+  class Food {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.radius = 2.5;
+      this.color = '#00ff88'; // var(--grn)
+    }
+
+    draw(ctx) {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.shadowBlur = 4;
+      ctx.shadowColor = this.color;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    }
+  }
+
+  // ------------------------------------------------
+  // Klasa Organism (Organizm)
+  // ------------------------------------------------
   class Organism {
     constructor(x, y) {
       this.x = x;
@@ -681,25 +720,30 @@
       this.vy = (Math.random() - 0.5) * 4;
       
       this.radius = 4;
-      // Losowy kolor neonowy dla lepszego efektu
       this.color = `hsl(${Math.random() * 360}, 80%, 60%)`; 
+      
+      // Etap 2: Energia
+      this.energy = 100;
+      this.dead = false;
     }
 
-    update(friction, width, height) {
-      // Aktualizacja pozycji na podstawie prędkości
+    update(width, height) {
+      if (this.dead) return;
+
+      // Aktualizacja pozycji
       this.x += this.vx;
       this.y += this.vy;
       
-      // Zastosowanie tarcia środowiska (od 0.9 do 0.999)
+      // Tarcie
+      const friction = getFriction();
       this.vx *= friction;
       this.vy *= friction;
 
-      // Na tym etapie symulujemy prosty "losowy spacer" (Brownian motion), 
-      // zanim mózg (sieć neuronowa) przejmie kontrolę nad ruchem.
-      this.vx += (Math.random() - 0.5) * 0.5;
-      this.vy += (Math.random() - 0.5) * 0.5;
+      // Wciąż "losowy spacer", za niedługo dodamy mózg
+      this.vx += (Math.random() - 0.5) * 0.8;
+      this.vy += (Math.random() - 0.5) * 0.8;
 
-      // Odbijanie się od krawędzi świata
+      // Odbijanie się od krawędzi
       if (this.x - this.radius < 0 || this.x + this.radius > width) {
         this.vx *= -1;
         this.x = Math.max(this.radius, Math.min(this.x, width - this.radius));
@@ -708,42 +752,54 @@
         this.vy *= -1;
         this.y = Math.max(this.radius, Math.min(this.y, height - this.radius));
       }
+
+      // Obliczanie spalania energii (Metabolizm)
+      // Stały koszt przetrwania + koszt zależny od prędkości (im szybciej, tym gorzej)
+      const speed = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
+      this.energy -= (0.1 + speed * 0.05);
+
+      if (this.energy <= 0) {
+        this.dead = true;
+      }
     }
 
     draw(ctx) {
+      if (this.dead) return;
+      
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
       ctx.fillStyle = this.color;
-      // Lekka poświata
-      ctx.shadowBlur = 5;
-      ctx.shadowColor = this.color;
-      ctx.fill();
       
-      // Reset cienia dla innych elementów
-      ctx.shadowBlur = 0; 
+      // Organizmy z małą ilością energii stają się przezroczyste (bledną)
+      ctx.globalAlpha = Math.max(0.2, this.energy / 100);
+      
+      ctx.fill();
+      ctx.globalAlpha = 1.0; // Reset alpha dla innych rysunków
     }
   }
 
-  // 4. Inicjalizacja świata
-  const organisms = [];
-  const initialPopulation = parseInt(document.getElementById('sPopulation').value) || 80;
+  // ------------------------------------------------
+  // Inicjalizacja obiektów przed startem symulacji
+  // ------------------------------------------------
+  setTimeout(() => {
+    const initialPopulation = parseInt(document.getElementById('sPopulation').value) || 80;
+    const initialFoodCount = parseInt(document.getElementById('sFoodCount').value) || 120;
 
-  for (let i = 0; i < initialPopulation; i++) {
-    organisms.push(new Organism(
-      Math.random() * canvas.width, 
-      Math.random() * canvas.height
-    ));
-  }
+    for (let i = 0; i < initialPopulation; i++) {
+      organisms.push(new Organism(Math.random() * canvas.width, Math.random() * canvas.height));
+    }
 
-  // Odczyt sliderów z panelu bocznego (na żywo)
-  const frictionSlider = document.getElementById('sFriction');
-  const uiFps = document.getElementById('cFPS');
+    for (let i = 0; i < initialFoodCount; i++) {
+      foods.push(new Food(Math.random() * canvas.width, Math.random() * canvas.height));
+    }
+  }, 100); // Małe opóźnienie, aby upewnić się, że canvas ma właściwy rozmiar
 
-  // Do mierzenia FPS
+  // ------------------------------------------------
+  // Główna pętla symulacji (Game Loop)
+  // ------------------------------------------------
   let lastTime = performance.now();
   let frameCount = 0;
 
-  // 5. Główna pętla symulacji (Game Loop)
   function animate(currentTime) {
     // Obliczanie FPS
     frameCount++;
@@ -753,18 +809,57 @@
       lastTime = currentTime;
     }
 
-    // Czyszczenie klatki - używamy przezroczystości dla efektu 'śladu' (trails),
-    // który zaplanowałeś w UI, ale na razie użyjmy pełnego czyszczenia.
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    // Pobranie aktualnego tarcia z interfejsu (slider w lewym panelu)
-    const currentFriction = parseFloat(frictionSlider.value);
+    // Zwiększ czas świata
+    ticks++;
+    uiTick.innerText = ticks;
 
-    // Aktualizacja i rysowanie wszystkich organizmów
+    const currentFoodEnergy = getFoodEnergy();
+
+    // 1. Aktualizacja Organizmów i Zjadanie
     organisms.forEach(org => {
-      org.update(currentFriction, canvas.width, canvas.height);
+      if (org.dead) return;
+
+      // Szukanie i zjadanie pożywienia (bardzo prosta pętla, optymalizacja QuadTree nadejdzie później)
+      for (let i = foods.length - 1; i >= 0; i--) {
+        const f = foods[i];
+        
+        // Twierdzenie Pitagorasa: obliczanie odległości między środkami kół
+        const dx = org.x - f.x;
+        const dy = org.y - f.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        
+        // Jeśli się stykają/nachodzą
+        if (dist < org.radius + f.radius) {
+          org.energy += currentFoodEnergy; // Dodaj energię
+          if (org.energy > 200) org.energy = 200; // Górny limit energii
+          
+          foods.splice(i, 1); // Zniszcz zjedzony zasób
+          
+          // Uproszczone odradzanie: natychmiast wrzuć nowy zasób w losowe miejsce
+          foods.push(new Food(Math.random() * canvas.width, Math.random() * canvas.height));
+        }
+      }
+
+      org.update(canvas.width, canvas.height);
       org.draw(ctx);
     });
+
+    // 2. Czyszczenie cmentarza
+    const popBefore = organisms.length;
+    organisms = organisms.filter(org => !org.dead);
+    const deathsThisFrame = popBefore - organisms.length;
+    
+    if (deathsThisFrame > 0) {
+      totalDeaths += deathsThisFrame;
+      uiDeath.innerText = totalDeaths;
+    }
+    
+    uiPop.innerText = organisms.length;
+
+    // 3. Rysowanie reszty jedzenia
+    foods.forEach(f => f.draw(ctx));
 
     // Zlecenie następnej klatki
     requestAnimationFrame(animate);
@@ -774,7 +869,5 @@
   requestAnimationFrame(animate);
 
 </script>
-</script>
-
 </body>
 </html>
