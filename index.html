@@ -81,4 +81,1840 @@ body {
   background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-transform: upperc
+  text-transform: uppercase;
+}
+
+.logo .version {
+  font-size: 10px;
+  color: var(--text-dim);
+  font-family: 'JetBrains Mono', monospace;
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.phase-indicator {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  padding: 4px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: phasePulse 2s ease-in-out infinite;
+}
+
+@keyframes phasePulse {
+  0%, 100% { box-shadow: 0 0 5px rgba(0,240,255,0.2); }
+  50% { box-shadow: 0 0 20px rgba(0,240,255,0.5); }
+}
+
+.gen-counter {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+}
+
+.gen-label {
+  font-size: 10px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: var(--glow-cyan);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, rgba(0,240,255,0.15), rgba(255,0,170,0.15));
+  border-color: var(--accent-cyan);
+}
+
+.btn-danger { border-color: var(--accent-red); color: var(--accent-red); }
+.btn-danger:hover { box-shadow: 0 0 20px rgba(255,51,102,0.3); }
+
+/* ===== LEFT PANEL ===== */
+.left-panel {
+  background: var(--bg-secondary);
+  padding: 16px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.panel-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.param-group {
+  margin-bottom: 16px;
+}
+
+.param-group h3 {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.param-group h3 .icon { font-size: 14px; }
+
+.param-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.param-row label {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.param-row .value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--accent-cyan);
+  min-width: 40px;
+  text-align: right;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+  margin: 4px 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0,240,255,0.5);
+}
+
+select {
+  width: 100%;
+  padding: 6px 10px;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  outline: none;
+  cursor: pointer;
+}
+
+select:focus { border-color: var(--accent-cyan); }
+
+/* ===== MAIN CANVAS ===== */
+.canvas-container {
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+canvas#worldCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.canvas-overlay {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.stat-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 4px 10px;
+  background: rgba(10,10,15,0.8);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-chip .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.minimap-container {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 160px;
+  height: 120px;
+  background: rgba(10,10,15,0.8);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+canvas#minimapCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== RIGHT PANEL ===== */
+.right-panel {
+  background: var(--bg-secondary);
+  padding: 16px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.organism-inspector {
+  margin-bottom: 16px;
+}
+
+.inspector-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.inspector-avatar {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-cyan);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+
+.inspector-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.inspector-species {
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.genome-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.gene-bar {
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  padding: 6px 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.gene-bar .gene-label {
+  font-size: 9px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  z-index: 1;
+}
+
+.gene-bar .gene-value {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--text-primary);
+  position: relative;
+  z-index: 1;
+}
+
+.gene-bar .gene-fill {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  opacity: 0.15;
+  border-radius: 3px;
+}
+
+/* Leaderboard */
+.leaderboard {
+  margin-bottom: 12px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.leaderboard-item:hover { background: var(--bg-tertiary); }
+
+.leaderboard-rank {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--text-dim);
+  width: 20px;
+}
+
+.leaderboard-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.leaderboard-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.leaderboard-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.leaderboard-score {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--accent-green);
+}
+
+/* ===== BOTTOM PANEL ===== */
+.bottom-panel {
+  grid-column: 1 / -1;
+  background: var(--bg-secondary);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1px;
+  border-top: 1px solid var(--border);
+}
+
+.chart-container {
+  padding: 12px;
+  position: relative;
+}
+
+.chart-container .chart-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+canvas.chart-canvas {
+  width: 100%;
+  height: calc(100% - 24px);
+}
+
+/* ===== INTRO OVERLAY ===== */
+.intro-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--bg-primary);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.intro-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.intro-content {
+  text-align: center;
+  max-width: 600px;
+  padding: 40px;
+}
+
+.intro-dna {
+  font-size: 80px;
+  margin-bottom: 24px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.intro-content h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 36px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 16px;
+  letter-spacing: 3px;
+}
+
+.intro-content p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.intro-content .features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.feature-item .emoji { font-size: 16px; }
+
+.btn-start {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  padding: 14px 48px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-start:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(0,240,255,0.3), 0 0 40px rgba(255,0,170,0.3);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* Responsive helpers */
+.hidden { display: none !important; }
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 11px;
+  pointer-events: none;
+  z-index: 100;
+  max-width: 240px;
+  box-shadow: var(--glow-cyan);
+}
+
+/* Speed control */
+.speed-controls {
+  display: flex;
+  gap: 4px;
+}
+.speed-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  padding: 4px 8px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+.speed-btn.active {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: rgba(0,240,255,0.1);
+}
+</style>
+</head>
+<body>
+
+<!-- ===== INTRO SCREEN ===== -->
+<div class="intro-overlay" id="introOverlay">
+  <div class="intro-content">
+    <div class="intro-dna">🧬</div>
+    <h1>NeuroGenesis Lab</h1>
+    <p>Symulacja ekosystemu ewolucyjnego z algorytmem genetycznym, fizyką 2D i sztuczną selekcją naturalną. Obserwuj jak z chaosu wyłania się inteligencja.</p>
+    <div class="features">
+      <div class="feature-item"><span class="emoji">🔬</span> Złożony genom — 12 genów</div>
+      <div class="feature-item"><span class="emoji">⚡</span> Fizyka 2D w czasie rzeczywistym</div>
+      <div class="feature-item"><span class="emoji">🧠</span> Sieci neuronowe sterują ruchem</div>
+      <div class="feature-item"><span class="emoji">🌿</span> Ekosystem drapieżnik-ofiara</div>
+      <div class="feature-item"><span class="emoji">💀</span> Starzenie, śmierć, mutacje</div>
+      <div class="feature-item"><span class="emoji">📊</span> Wykresy ewolucji na żywo</div>
+      <div class="feature-item"><span class="emoji">🗺️</span> Minimapa świata</div>
+      <div class="feature-item"><span class="emoji">🎨</span> Wizualizacja genomu RGB</div>
+    </div>
+    <button class="btn-start" onclick="startSimulation()">Rozpocznij Ewolucję</button>
+  </div>
+</div>
+
+<!-- ===== MAIN APP ===== -->
+<div class="app-container">
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 32 32">
+        <g class="dna-helix">
+          <circle cx="16" cy="4" r="3" fill="var(--accent-cyan)" opacity="0.8"/>
+          <circle cx="16" cy="28" r="3" fill="var(--accent-magenta)" opacity="0.8"/>
+          <circle cx="4" cy="16" r="2.5" fill="var(--accent-green)" opacity="0.8"/>
+          <circle cx="28" cy="16" r="2.5" fill="var(--accent-orange)" opacity="0.8"/>
+          <line x1="16" y1="4" x2="16" y2="28" stroke="var(--border)" stroke-width="1"/>
+          <line x1="4" y1="16" x2="28" y2="16" stroke="var(--border)" stroke-width="1"/>
+        </g>
+      </svg>
+      <h1>NeuroGenesis Lab</h1>
+      <span class="version">v2.0</span>
+    </div>
+    <div class="header-center">
+      <div class="phase-indicator" id="phaseIndicator">INICJALIZACJA</div>
+      <div style="text-align:center">
+        <div class="gen-counter" id="genCounter">GEN 0</div>
+        <div class="gen-label">Generacja</div>
+      </div>
+      <div style="text-align:center">
+        <div class="gen-counter" id="tickCounter" style="font-size:14px;">0</div>
+        <div class="gen-label">Tick</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="speed-controls">
+        <button class="speed-btn" onclick="setSpeed(0.5)">0.5x</button>
+        <button class="speed-btn active" onclick="setSpeed(1)">1x</button>
+        <button class="speed-btn" onclick="setSpeed(2)">2x</button>
+        <button class="speed-btn" onclick="setSpeed(5)">5x</button>
+        <button class="speed-btn" onclick="setSpeed(10)">10x</button>
+      </div>
+      <button class="btn btn-primary" id="btnPlayPause" onclick="togglePause()">⏸ Pauza</button>
+      <button class="btn btn-danger" onclick="resetSimulation()">↺ Reset</button>
+    </div>
+  </div>
+
+  <!-- LEFT PANEL -->
+  <div class="left-panel">
+    <div class="panel-title">⚙ Parametry Symulacji</div>
+
+    <div class="param-group">
+      <h3><span class="icon">🌍</span> Świat</h3>
+      <div class="param-row"><label>Rozmiar świata</label><span class="value" id="vWorldSize">3000</span></div>
+      <input type="range" id="sWorldSize" min="1500" max="6000" value="3000" step="500" oninput="updateParam(this)">
+      <div class="param-row"><label>Tarcie</label><span class="value" id="vFriction">0.97</span></div>
+      <input type="range" id="sFriction" min="0.9" max="0.999" value="0.97" step="0.001" oninput="updateParam(this)">
+    </div>
+
+    <div class="param-group">
+      <h3><span class="icon">🧬</span> Genetyka</h3>
+      <div class="param-row"><label>Populacja startowa</label><span class="value" id="vPopulation">80</span></div>
+      <input type="range" id="sPopulation" min="20" max="200" value="80" step="10" oninput="updateParam(this)">
+      <div class="param-row"><label>Wskaźnik mutacji</label><span class="value" id="vMutationRate">0.15</span></div>
+      <input type="range" id="sMutationRate" min="0.01" max="0.5" value="0.15" step="0.01" oninput="updateParam(this)">
+      <div class="param-row"><label>Siła mutacji</label><span class="value" id="vMutationStrength">0.3</span></div>
+      <input type="range" id="sMutationStrength" min="0.05" max="1.0" value="0.3" step="0.05" oninput="updateParam(this)">
+      <div class="param-row"><label>Elitaryzm (Top N)</label><span class="value" id="vElitism">5</span></div>
+      <input type="range" id="sElitism" min="0" max="20" value="5" step="1" oninput="updateParam(this)">
+    </div>
+
+    <div class="param-group">
+      <h3><span class="icon">🍃</span> Zasoby</h3>
+      <div class="param-row"><label>Ilość jedzenia</label><span class="value" id="vFoodCount">120</span></div>
+      <input type="range" id="sFoodCount" min="20" max="400" value="120" step="10" oninput="updateParam(this)">
+      <div class="param-row"><label>Wartość energetyczna</label><span class="value" id="vFoodEnergy">40</span></div>
+      <input type="range" id="sFoodEnergy" min="10" max="100" value="40" step="5" oninput="updateParam(this)">
+      <div class="param-row"><label>Prędkość odradzania</label><span class="value" id="vFoodRespawn">0.03</span></div>
+      <input type="range" id="sFoodRespawn" min="0.005" max="0.1" value="0.03" step="0.005" oninput="updateParam(this)">
+    </div>
+
+    <div class="param-group">
+      <h3><span class="icon">☠️</span> Drapieżniki</h3>
+      <div class="param-row"><label>Drapieżników startowo</label><span class="value" id="vPredators">8</span></div>
+      <input type="range" id="sPredators" min="0" max="30" value="8" step="1" oninput="updateParam(this)">
+      <div class="param-row"><label>Bonus za zabójstwo</label><span class="value" id="vPredatorBonus">60</span></div>
+      <input type="range" id="sPredatorBonus" min="20" max="150" value="60" step="10" oninput="updateParam(this)">
+    </div>
+
+    <div class="param-group">
+      <h3><span class="icon">🧠</span> Sieć Neuronowa</h3>
+      <div class="param-row"><label>Ukryte neurony</label><span class="value" id="vHiddenNeurons">8</span></div>
+      <input type="range" id="sHiddenNeurons" min="4" max="16" value="8" step="1" oninput="updateParam(this)">
+    </div>
+
+    <div class="param-group">
+      <h3><span class="icon">🎨</span> Wizualizacja</h3>
+      <div class="param-row"><label>Pokaż pola widzenia</label></div>
+      <select id="sVisionMode" onchange="updateParam(this)">
+        <option value="selected">Wybrany organizm</option>
+        <option value="all">Wszystkie organizmy</option>
+        <option value="none">Brak</option>
+      </select>
+      <div style="height:8px"></div>
+      <div class="param-row"><label>Tryb kolorów</label></div>
+      <select id="sColorMode" onchange="updateParam(this)">
+        <option value="genome">Kolor genomu (DNA)</option>
+        <option value="energy">Poziom energii</option>
+        <option value="age">Wiek organizmu</option>
+        <option value="species">Gatunek</option>
+        <option value="fitness">Fitness</option>
+      </select>
+      <div style="height:8px"></div>
+      <div class="param-row"><label>Ślady ruchu</label><span class="value" id="vTrails">0</span></div>
+      <input type="range" id="sTrails" min="0" max="50" value="0" step="5" oninput="updateParam(this)">
+    </div>
+  </div>
+
+  <!-- MAIN CANVAS -->
+  <div class="canvas-container" id="canvasContainer">
+    <canvas id="worldCanvas"></canvas>
+    <div class="canvas-overlay">
+      <div class="stat-chip"><span class="dot" style="background:var(--accent-green)"></span> Roślinożercy: <span id="chipHerbivores">0</span></div>
+      <div class="stat-chip"><span class="dot" style="background:var(--accent-red)"></span> Drapieżniki: <span id="chipPredators">0</span></div>
+      <div class="stat-chip"><span class="dot" style="background:var(--accent-orange)"></span> Jedzenie: <span id="chipFood">0</span></div>
+      <div class="stat-chip"><span class="dot" style="background:var(--accent-cyan)"></span> Narodziny: <span id="chipBirths">0</span></div>
+      <div class="stat-chip"><span class="dot" style="background:var(--accent-magenta)"></span> Zgony: <span id="chipDeaths">0</span></div>
+      <div class="stat-chip">FPS: <span id="chipFps">60</span></div>
+    </div>
+    <div class="minimap-container">
+      <canvas id="minimapCanvas"></canvas>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel">
+    <div class="panel-title">🔬 Inspektor Organizmów</div>
+
+    <div class="organism-inspector" id="inspectorPanel">
+      <div class="inspector-header">
+        <div class="inspector-avatar" id="inspectorAvatar">🦠</div>
+        <div>
+          <div class="inspector-name" id="inspectorName">Kliknij organizm</div>
+          <div class="inspector-species" id="inspectorSpecies">aby zobaczyć szczegóły</div>
+        </div>
+      </div>
+
+      <div class="genome-display" id="genomeDisplay">
+        <div class="gene-bar"><span class="gene-label">Prędkość</span><br><span class="gene-value" id="gSpeed">—</span><div class="gene-fill" id="gfSpeed" style="width:0%;background:var(--accent-cyan)"></div></div>
+        <div class="gene-bar"><span class="gene-label">Rozmiar</span><br><span class="gene-value" id="gSize">—</span><div class="gene-fill" id="gfSize" style="width:0%;background:var(--accent-green)"></div></div>
+        <div class="gene-bar"><span class="gene-label">Wzrok</span><br><span class="gene-value" id="gVision">—</span><div class="gene-fill" id="gfVision" style="width:0%;background:var(--accent-orange)"></div></div>
+        <div class="gene-bar"><span class="gene-label">Metabolizm</span><br><span class="gene-value" id="gMeta">—</span><div class="gene-fill" id="gfMeta" style="width:0%;background:var(--accent-magenta)"></div></div>
+        <div class="gene-bar"><span class="gene-label">Agresja</span><br><span class="gene-value" id="gAggro">—</span><div class="gene-fill" id="gfAggro" style="width:0%;background:var(--accent-red)"></div></div>
+        <div class="gene-bar"><span class="gene-label">Płodność</span><br><span class="gene-value" id="gFertility">—</span><div class="gene-fill" id="gfFertility" style="width:0%;background:#ffaa00"></div></div>
+        <div class="gene-bar"><span class="gene-label">Żywotność</span><br><span class="gene-value" id="gLifespan">—</span><div class="gene-fill" id="gfLifespan" style="width:0%;background:#44ff88"></div></div>
+        <div class="gene-bar"><span class="gene-label">Energia</span><br><span class="gene-value" id="gEnergy">—</span><div class="gene-fill" id="gfEnergy" style="width:0%;background:#ffff00"></div></div>
+        <div class="gene-bar"><span class="gene-label">Hue</span><br><span class="gene-value" id="gHue">—</span><div class="gene-fill" id="gfHue" style="width:0%;background:#ff00ff"></div></div>
+        <div class="gene-bar"><span class="gene-label">Wiek</span><br><span class="gene-value" id="gAge">—</span><div class="gene-fill" id="gfAge" style="width:0%;background:#8888ff"></div></div>
+        <div class="gene-bar"><span class="gene-label">Fitness</span><br><span class="gene-value" id="gFitness">—</span><div class="gene-fill" id="gfFitness" style="width:0%;background:var(--accent-cyan)"></div></div>
+        <div class="gene-bar"><span class="gene-label">Potomstwo</span><br><span class="gene-value" id="gChildren">—</span><div class="gene-fill" id="gfChildren" style="width:0%;background:#ff8844"></div></div>
+      </div>
+    </div>
+
+    <div class="panel-title">🏆 Ranking — Top Fitness</div>
+    <div class="leaderboard" id="leaderboard"></div>
+
+    <div class="panel-title">📜 Dziennik Zdarzeń</div>
+    <div id="eventLog" style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);max-height:200px;overflow-y:auto;"></div>
+  </div>
+
+  <!-- BOTTOM PANEL -->
+  <div class="bottom-panel">
+    <div class="chart-container">
+      <div class="chart-title">📈 Populacja w czasie</div>
+      <canvas id="chartPopulation" class="chart-canvas"></canvas>
+    </div>
+    <div class="chart-container">
+      <div class="chart-title">🧬 Średni genom w czasie</div>
+      <canvas id="chartGenome" class="chart-canvas"></canvas>
+    </div>
+    <div class="chart-container">
+      <div class="chart-title">⚡ Fitness & Różnorodność</div>
+      <canvas id="chartFitness" class="chart-canvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// NEUROGENESIS LAB — EVOLUTIONARY ECOSYSTEM SIMULATOR
+// ============================================================
+
+// ---- UTILS ----
+const rand = (min, max) => Math.random() * (max - min) + min;
+const randInt = (min, max) => Math.floor(rand(min, max + 1));
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const dist = (x1, y1, x2, y2) => Math.hypot(x2 - x1, y2 - y1);
+const angle = (x1, y1, x2, y2) => Math.atan2(y2 - y1, x2 - x1);
+
+function hsl(h, s, l, a=1) { return `hsla(${h},${s}%,${l}%,${a})`; }
+
+// ---- NAME GENERATOR ----
+const SYLLABLES = ['zo','ki','mu','ra','no','te','li','va','xu','be','fy','go','pa','si','de','hu','wo','je','ka','mi','na','re','to','lu','vi','xa','bo','fy','gi','pe','su','di','ha','we','jo','ku','my','ne','ro','tu','la','vo','xe','bi','fe','gu','po','sa','do','he'];
+function generateName(genome) {
+  let seed = 0;
+  for (let g of Object.values(genome)) seed += (typeof g === 'number' ? g * 1000 : 0);
+  seed = Math.floor(Math.abs(seed));
+  const len = 2 + (seed % 3);
+  let name = '';
+  for (let i = 0; i < len; i++) {
+    name += SYLLABLES[(seed + i * 7) % SYLLABLES.length];
+  }
+  return name.charAt(0).toUpperCase() + name.slice(1);
+}
+
+// ---- SIMPLE NEURAL NETWORK (feedforward) ----
+class NeuralNet {
+  constructor(inputSize, hiddenSize, outputSize) {
+    this.iS = inputSize; this.hS = hiddenSize; this.oS = outputSize;
+    this.wIH = [];
+    this.wHO = [];
+    this.bH = [];
+    this.bO = [];
+    for (let i = 0; i < hiddenSize; i++) {
+      this.wIH[i] = [];
+      for (let j = 0; j < inputSize; j++) this.wIH[i][j] = rand(-1, 1);
+      this.bH[i] = rand(-0.5, 0.5);
+    }
+    for (let i = 0; i < outputSize; i++) {
+      this.wHO[i] = [];
+      for (let j = 0; j < hiddenSize; j++) this.wHO[i][j] = rand(-1, 1);
+      this.bO[i] = rand(-0.5, 0.5);
+    }
+  }
+
+  forward(inputs) {
+    const hidden = [];
+    for (let i = 0; i < this.hS; i++) {
+      let sum = this.bH[i];
+      for (let j = 0; j < this.iS; j++) sum += inputs[j] * this.wIH[i][j];
+      hidden[i] = Math.tanh(sum);
+    }
+    const output = [];
+    for (let i = 0; i < this.oS; i++) {
+      let sum = this.bO[i];
+      for (let j = 0; j < this.hS; j++) sum += hidden[j] * this.wHO[i][j];
+      output[i] = Math.tanh(sum);
+    }
+    return output;
+  }
+
+  copy() {
+    const nn = new NeuralNet(this.iS, this.hS, this.oS);
+    nn.wIH = this.wIH.map(r => [...r]);
+    nn.wHO = this.wHO.map(r => [...r]);
+    nn.bH = [...this.bH];
+    nn.bO = [...this.bO];
+    return nn;
+  }
+
+  mutate(rate, strength) {
+    const m = (arr) => arr.map(v => Math.random() < rate ? v + rand(-strength, strength) : v);
+    this.wIH = this.wIH.map(r => m(r));
+    this.wHO = this.wHO.map(r => m(r));
+    this.bH = m(this.bH);
+    this.bO = m(this.bO);
+  }
+
+  static crossover(a, b) {
+    const nn = a.copy();
+    for (let i = 0; i < nn.hS; i++)
+      for (let j = 0; j < nn.iS; j++)
+        if (Math.random() < 0.5) nn.wIH[i][j] = b.wIH[i][j];
+    for (let i = 0; i < nn.oS; i++)
+      for (let j = 0; j < nn.hS; j++)
+        if (Math.random() < 0.5) nn.wHO[i][j] = b.wHO[i][j];
+    for (let i = 0; i < nn.hS; i++)
+      if (Math.random() < 0.5) nn.bH[i] = b.bH[i];
+    for (let i = 0; i < nn.oS; i++)
+      if (Math.random() < 0.5) nn.bO[i] = b.bO[i];
+    return nn;
+  }
+}
+
+// ---- FOOD ----
+class Food {
+  constructor(x, y, energy) {
+    this.x = x; this.y = y;
+    this.energy = energy;
+    this.maxEnergy = energy;
+    this.alive = true;
+    this.pulse = Math.random() * Math.PI * 2;
+    this.type = Math.random() < 0.1 ? 'super' : 'normal';
+    if (this.type === 'super') this.energy *= 3;
+  }
+}
+
+// ---- ORGANISM ----
+let orgIdCounter = 0;
+
+class Organism {
+  constructor(x, y, genome, brain, isPredator = false) {
+    this.id = orgIdCounter++;
+    this.x = x; this.y = y;
+    this.vx = rand(-1, 1); this.vy = rand(-1, 1);
+    this.genome = { ...genome };
+    this.brain = brain;
+    this.isPredator = isPredator;
+    this.energy = 60;
+    this.maxEnergy = 100 + genome.size * 20;
+    this.age = 0;
+    this.maxAge = genome.lifespan;
+    this.fitness = 0;
+    this.foodEaten = 0;
+    this.kills = 0;
+    this.children = 0;
+    this.alive = true;
+    this.name = generateName(genome);
+    this.trail = [];
+    this.angle = Math.random() * Math.PI * 2;
+    this.targetAngle = this.angle;
+    this.glowIntensity = 0;
+    this.generation = 0;
+    // death particles
+    this.deathParticles = [];
+    this.dying = false;
+    this.dyingTimer = 0;
+  }
+
+  get color() {
+    const g = this.genome;
+    if (this.isPredator) return hsl(0, 70 + g.saturation * 30, 40 + g.lightness * 20);
+    return hsl(g.hue * 360, 50 + g.saturation * 50, 35 + g.lightness * 30);
+  }
+
+  get radius() { return 4 + this.genome.size * 8; }
+
+  get speed() { return 1 + this.genome.speed * 3; }
+
+  get visionRange() { return 50 + this.genome.vision * 200; }
+
+  get ageRatio() { return this.age / this.maxAge; }
+
+  sense(organisms, foods, worldSize) {
+    const inputs = [];
+    // nearest food direction, distance
+    let nearFood = null, nearFoodDist = Infinity;
+    for (const f of foods) {
+      if (!f.alive) continue;
+      const d = dist(this.x, this.y, f.x, f.y);
+      if (d < this.visionRange && d < nearFoodDist) { nearFood = f; nearFoodDist = d; }
+    }
+    if (nearFood) {
+      const a = angle(this.x, this.y, nearFood.x, nearFood.y) - this.angle;
+      inputs.push(Math.cos(a), Math.sin(a), 1 - nearFoodDist / this.visionRange);
+    } else {
+      inputs.push(0, 0, 0);
+    }
+
+    // nearest threat or prey
+    let nearOrg = null, nearOrgDist = Infinity;
+    for (const o of organisms) {
+      if (o === this || !o.alive) continue;
+      const d = dist(this.x, this.y, o.x, o.y);
+      if (d < this.visionRange && d < nearOrgDist) {
+        if (this.isPredator && !o.isPredator) { nearOrg = o; nearOrgDist = d; }
+        else if (!this.isPredator && o.isPredator) { nearOrg = o; nearOrgDist = d; }
+        else if (d < nearOrgDist * 0.5) { nearOrg = o; nearOrgDist = d; }
+      }
+    }
+    if (nearOrg) {
+      const a = angle(this.x, this.y, nearOrg.x, nearOrg.y) - this.angle;
+      const threat = (this.isPredator && !nearOrg.isPredator) ? 1 : -1;
+      inputs.push(Math.cos(a), Math.sin(a), 1 - nearOrgDist / this.visionRange, threat);
+    } else {
+      inputs.push(0, 0, 0, 0);
+    }
+
+    // own state
+    inputs.push(
+      this.energy / this.maxEnergy,
+      this.ageRatio,
+      (this.x / worldSize) * 2 - 1,
+      (this.y / worldSize) * 2 - 1,
+      Math.sin(this.age * 0.1) // internal clock
+    );
+
+    return inputs;
+  }
+
+  think(inputs) {
+    return this.brain.forward(inputs);
+  }
+
+  act(outputs, worldSize, friction) {
+    // outputs: [turnLeft, turnRight, thrust, brake]
+    const turnForce = (outputs[1] - outputs[0]) * 0.15;
+    this.targetAngle += turnForce;
+    this.angle = lerp(this.angle, this.targetAngle, 0.1);
+
+    const thrust = Math.max(0, outputs[2]) * this.speed;
+    const brake = Math.max(0, outputs[3]) * 0.5;
+    const agePenalty = this.ageRatio > 0.7 ? 1 - (this.ageRatio - 0.7) / 0.3 * 0.6 : 1;
+
+    this.vx += Math.cos(this.angle) * thrust * agePenalty;
+    this.vy += Math.sin(this.angle) * thrust * agePenalty;
+    this.vx *= friction - brake * 0.03;
+    this.vy *= friction - brake * 0.03;
+
+    this.x += this.vx;
+    this.y += this.vy;
+
+    // world bounds — wrap around
+    if (this.x < 0) this.x += worldSize;
+    if (this.x > worldSize) this.x -= worldSize;
+    if (this.y < 0) this.y += worldSize;
+    if (this.y > worldSize) this.y -= worldSize;
+
+    // energy cost
+    const moveCost = (Math.abs(this.vx) + Math.abs(this.vy)) * 0.01 * (1 + this.genome.size);
+    const baseCost = 0.03 * (1 + this.genome.speed * 0.5 + this.genome.vision * 0.3);
+    this.energy -= (moveCost + baseCost) / this.genome.metabolism;
+
+    // trail
+    if (sim.params.trails > 0) {
+      this.trail.push({ x: this.x, y: this.y, age: 0 });
+      if (this.trail.length > sim.params.trails) this.trail.shift();
+    }
+
+    this.age++;
+    this.fitness += 0.01 + this.foodEaten * 0.5 + this.children * 2;
+  }
+
+  canReproduce() {
+    return this.energy > this.maxEnergy * 0.7
+      && this.ageRatio < 0.8
+      && this.age > 100;
+  }
+
+  reproduce() {
+    const childGenome = { ...this.genome };
+    const mr = sim.params.mutationRate;
+    const ms = sim.params.mutationStrength;
+    for (const key of Object.keys(childGenome)) {
+      if (Math.random() < mr) {
+        childGenome[key] = clamp(childGenome[key] + rand(-ms, ms), 0, 1);
+      }
+    }
+    childGenome.lifespan = Math.max(300, childGenome.lifespan + randInt(-100, 100));
+    const childBrain = this.brain.copy();
+    childBrain.mutate(mr, ms);
+
+    const childAngle = this.angle + rand(-Math.PI, Math.PI);
+    const cx = this.x + Math.cos(childAngle) * this.radius * 3;
+    const cy = this.y + Math.sin(childAngle) * this.radius * 3;
+
+    // chance of species change
+    const becomePred = !this.isPredator && this.genome.aggression > 0.85 && Math.random() < 0.05;
+    const child = new Organism(cx, cy, childGenome, childBrain, this.isPredator || becomePred);
+    child.energy = this.energy * 0.4;
+    child.generation = this.generation + 1;
+    this.energy *= 0.35;
+    this.children++;
+    return child;
+  }
+}
+
+// ---- PARTICLE FX ----
+class Particle {
+  constructor(x, y, color) {
+    this.x = x; this.y = y;
+    this.vx = rand(-2, 2); this.vy = rand(-3, -0.5);
+    this.life = 1;
+    this.decay = rand(0.01, 0.04);
+    this.color = color;
+    this.size = rand(1, 3);
+  }
+  update() {
+    this.x += this.vx; this.y += this.vy;
+    this.vy -= 0.02; // float up
+    this.life -= this.decay;
+  }
+}
+
+// ---- SIMULATION ----
+const sim = {
+  organisms: [],
+  foods: [],
+  particles: [],
+  params: {
+    worldSize: 3000,
+    friction: 0.97,
+    population: 80,
+    mutationRate: 0.15,
+    mutationStrength: 0.3,
+    elitism: 5,
+    foodCount: 120,
+    foodEnergy: 40,
+    foodRespawn: 0.03,
+    predators: 8,
+    predatorBonus: 60,
+    hiddenNeurons: 8,
+    visionMode: 'selected',
+    colorMode: 'genome',
+    trails: 0,
+  },
+  generation: 0,
+  tick: 0,
+  totalBirths: 0,
+  totalDeaths: 0,
+  paused: false,
+  speed: 1,
+  selectedOrganism: null,
+  camera: { x: 0, y: 0, zoom: 0.4, targetZoom: 0.4 },
+  history: {
+    herbivores: [], predators: [], food: [],
+    avgSpeed: [], avgSize: [], avgVision: [],
+    avgFitness: [], diversity: []
+  },
+  phase: 'CHAOS',
+  running: false,
+};
+
+function createGenome() {
+  return {
+    speed: rand(0.2, 0.8),
+    size: rand(0.2, 0.8),
+    vision: rand(0.2, 0.8),
+    metabolism: rand(0.3, 0.9),
+    aggression: rand(0, 1),
+    fertility: rand(0.3, 0.7),
+    lifespan: randInt(600, 2000),
+    hue: Math.random(),
+    saturation: rand(0.5, 1),
+    lightness: rand(0.3, 0.7),
+    defense: rand(0, 1),
+    curiosity: rand(0, 1),
+  };
+}
+
+function spawnFood(n) {
+  for (let i = 0; i < n; i++) {
+    sim.foods.push(new Food(
+      rand(50, sim.params.worldSize - 50),
+      rand(50, sim.params.worldSize - 50),
+      sim.params.foodEnergy
+    ));
+  }
+}
+
+function initSimulation() {
+  sim.organisms = [];
+  sim.foods = [];
+  sim.particles = [];
+  sim.generation = 0;
+  sim.tick = 0;
+  sim.totalBirths = 0;
+  sim.totalDeaths = 0;
+  sim.selectedOrganism = null;
+  sim.history = { herbivores:[], predators:[], food:[], avgSpeed:[], avgSize:[], avgVision:[], avgFitness:[], diversity:[] };
+  orgIdCounter = 0;
+
+  const ws = sim.params.worldSize;
+  const hiddenN = sim.params.hiddenNeurons;
+
+  // Spawn herbivores
+  for (let i = 0; i < sim.params.population; i++) {
+    const g = createGenome();
+    g.aggression = rand(0, 0.4);
+    const brain = new NeuralNet(12, hiddenN, 4);
+    const o = new Organism(rand(100, ws-100), rand(100, ws-100), g, brain, false);
+    sim.organisms.push(o);
+  }
+  // Spawn predators
+  for (let i = 0; i < sim.params.predators; i++) {
+    const g = createGenome();
+    g.aggression = rand(0.6, 1);
+    g.speed = rand(0.5, 1);
+    g.size = rand(0.4, 0.9);
+    const brain = new NeuralNet(12, hiddenN, 4);
+    const o = new Organism(rand(100, ws-100), rand(100, ws-100), g, brain, true);
+    sim.organisms.push(o);
+  }
+
+  spawnFood(sim.params.foodCount);
+
+  sim.camera.x = ws / 2;
+  sim.camera.y = ws / 2;
+}
+
+// ---- UPDATE ----
+function updateSimulation() {
+  const ws = sim.params.worldSize;
+  const fr = sim.params.friction;
+
+  // Food respawn
+  const aliveFood = sim.foods.filter(f => f.alive).length;
+  if (aliveFood < sim.params.foodCount && Math.random() < sim.params.foodRespawn) {
+    sim.foods.push(new Food(rand(50, ws-50), rand(50, ws-50), sim.params.foodEnergy));
+  }
+
+  // Remove dead food
+  sim.foods = sim.foods.filter(f => f.alive);
+
+  const newOrganisms = [];
+
+  for (const o of sim.organisms) {
+    if (!o.alive) continue;
+
+    // Sense environment
+    const inputs = o.sense(sim.organisms, sim.foods, ws);
+    const outputs = o.think(inputs);
+    o.act(outputs, ws, fr);
+
+    // Eat food
+    for (const f of sim.foods) {
+      if (!f.alive) continue;
+      const d = dist(o.x, o.y, f.x, f.y);
+      if (d < o.radius + 6) {
+        o.energy = Math.min(o.maxEnergy, o.energy + f.energy * o.genome.metabolism);
+        o.foodEaten++;
+        o.glowIntensity = 1;
+        f.alive = false;
+        // sparkle
+        for (let i = 0; i < 5; i++) sim.particles.push(new Particle(f.x, f.y, 'rgba(0,255,136,0.8)'));
+      }
+    }
+
+    // Predator attacks
+    if (o.isPredator) {
+      for (const prey of sim.organisms) {
+        if (prey === o || !prey.alive || prey.isPredator) continue;
+        const d = dist(o.x, o.y, prey.x, prey.y);
+        if (d < o.radius + prey.radius) {
+          if (o.genome.aggression > prey.genome.defense * 0.7) {
+            o.energy = Math.min(o.maxEnergy, o.energy + sim.params.predatorBonus);
+            o.kills++;
+            o.glowIntensity = 1;
+            prey.alive = false;
+            sim.totalDeaths++;
+            for (let i = 0; i < 10; i++) sim.particles.push(new Particle(prey.x, prey.y, 'rgba(255,50,100,0.8)'));
+            addEvent(`☠ ${o.name} zabił ${prey.name}`);
+          }
+        }
+      }
+    }
+
+    // Reproduce
+    if (o.canReproduce() && Math.random() < o.genome.fertility * 0.02) {
+      const child = o.reproduce();
+      newOrganisms.push(child);
+      sim.totalBirths++;
+      for (let i = 0; i < 6; i++) sim.particles.push(new Particle(o.x, o.y, 'rgba(0,240,255,0.8)'));
+      addEvent(`🐣 ${child.name} urodził się (gen ${child.generation})`);
+    }
+
+    // Aging & death
+    if (o.age >= o.maxAge || o.energy <= 0) {
+      o.alive = false;
+      sim.totalDeaths++;
+      for (let i = 0; i < 8; i++) sim.particles.push(new Particle(o.x, o.y, 'rgba(180,150,255,0.7)'));
+      if (o.energy <= 0) addEvent(`💀 ${o.name} umarł z głodu`);
+      else addEvent(`⏳ ${o.name} umarł ze starości`);
+    }
+
+    // Glow decay
+    o.glowIntensity *= 0.95;
+  }
+
+  sim.organisms = sim.organisms.filter(o => o.alive);
+  sim.organisms.push(...newOrganisms);
+
+  // Emergency respawn if population drops too low
+  if (sim.organisms.filter(o => !o.isPredator).length < 5) {
+    for (let i = 0; i < 20; i++) {
+      const g = createGenome();
+      g.aggression = rand(0, 0.4);
+      const brain = new NeuralNet(12, sim.params.hiddenNeurons, 4);
+      const o = new Organism(rand(100, ws-100), rand(100, ws-100), g, brain, false);
+      sim.organisms.push(o);
+    }
+    addEvent('🌱 Fala imigracji — nowe organizmy!');
+  }
+
+  // Particles
+  for (const p of sim.particles) p.update();
+  sim.particles = sim.particles.filter(p => p.life > 0);
+
+  // Update phase
+  if (sim.tick < 500) sim.phase = 'CHAOS';
+  else if (sim.tick < 2000) sim.phase = 'EWOLUCJA';
+  else if (sim.tick < 5000) sim.phase = 'KONWERGENCJA';
+  else sim.phase = 'STABILIZACJA';
+
+  // Tick count and periodic generation count
+  sim.tick++;
+  if (sim.tick % 500 === 0) {
+    sim.generation++;
+    recordHistory();
+  }
+
+  // Record history every 100 ticks
+  if (sim.tick % 100 === 0) recordHistory();
+}
+
+function recordHistory() {
+  const herbs = sim.organisms.filter(o => !o.isPredator);
+  const preds = sim.organisms.filter(o => o.isPredator);
+  sim.history.herbivores.push(herbs.length);
+  sim.history.predators.push(preds.length);
+  sim.history.food.push(sim.foods.filter(f => f.alive).length);
+
+  if (herbs.length > 0) {
+    sim.history.avgSpeed.push(herbs.reduce((s,o) => s + o.genome.speed, 0) / herbs.length);
+    sim.history.avgSize.push(herbs.reduce((s,o) => s + o.genome.size, 0) / herbs.length);
+    sim.history.avgVision.push(herbs.reduce((s,o) => s + o.genome.vision, 0) / herbs.length);
+    sim.history.avgFitness.push(herbs.reduce((s,o) => s + o.fitness, 0) / herbs.length);
+    // diversity = std dev of hue
+    const meanHue = herbs.reduce((s,o) => s + o.genome.hue, 0) / herbs.length;
+    const variance = herbs.reduce((s,o) => s + (o.genome.hue - meanHue) ** 2, 0) / herbs.length;
+    sim.history.diversity.push(Math.sqrt(variance));
+  }
+
+  // Keep history manageable
+  const maxHistory = 300;
+  for (const key of Object.keys(sim.history)) {
+    if (sim.history[key].length > maxHistory) sim.history[key] = sim.history[key].slice(-maxHistory);
+  }
+}
+
+// ---- RENDERING ----
+const mainCanvas = document.getElementById('worldCanvas');
+const mainCtx = mainCanvas.getContext('2d');
+const minimapCanvas = document.getElementById('minimapCanvas');
+const minimapCtx = minimapCanvas.getContext('2d');
+
+function resizeCanvas() {
+  const container = document.getElementById('canvasContainer');
+  mainCanvas.width = container.clientWidth * devicePixelRatio;
+  mainCanvas.height = container.clientHeight * devicePixelRatio;
+  mainCtx.scale(devicePixelRatio, devicePixelRatio);
+
+  minimapCanvas.width = 160 * devicePixelRatio;
+  minimapCanvas.height = 120 * devicePixelRatio;
+  minimapCtx.scale(devicePixelRatio, devicePixelRatio);
+}
+
+function screenToWorld(sx, sy) {
+  const cw = mainCanvas.width / devicePixelRatio;
+  const ch = mainCanvas.height / devicePixelRatio;
+  return {
+    x: (sx - cw/2) / sim.camera.zoom + sim.camera.x,
+    y: (sy - ch/2) / sim.camera.zoom + sim.camera.y
+  };
+}
+
+function worldToScreen(wx, wy) {
+  const cw = mainCanvas.width / devicePixelRatio;
+  const ch = mainCanvas.height / devicePixelRatio;
+  return {
+    x: (wx - sim.camera.x) * sim.camera.zoom + cw/2,
+    y: (wy - sim.camera.y) * sim.camera.zoom + ch/2
+  };
+}
+
+function renderWorld() {
+  const cw = mainCanvas.width / devicePixelRatio;
+  const ch = mainCanvas.height / devicePixelRatio;
+  const ctx = mainCtx;
+  const cam = sim.camera;
+
+  ctx.clearRect(0, 0, cw, ch);
+
+  // Background gradient
+  const grad = ctx.createRadialGradient(cw/2, ch/2, 0, cw/2, ch/2, Math.max(cw, ch));
+  grad.addColorStop(0, '#0d0d1a');
+  grad.addColorStop(1, '#050508');
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, cw, ch);
+
+  ctx.save();
+  ctx.translate(cw/2, ch/2);
+  ctx.scale(cam.zoom, cam.zoom);
+  ctx.translate(-cam.x, -cam.y);
+
+  const ws = sim.params.worldSize;
+
+  // Grid
+  ctx.strokeStyle = 'rgba(40,40,60,0.3)';
+  ctx.lineWidth = 1 / cam.zoom;
+  const gridSize = 200;
+  for (let x = 0; x <= ws; x += gridSize) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, ws); ctx.stroke();
+  }
+  for (let y = 0; y <= ws; y += gridSize) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(ws, y); ctx.stroke();
+  }
+
+  // World border
+  ctx.strokeStyle = 'rgba(0,240,255,0.15)';
+  ctx.lineWidth = 3 / cam.zoom;
+  ctx.strokeRect(0, 0, ws, ws);
+
+  // Food
+  for (const f of sim.foods) {
+    if (!f.alive) continue;
+    f.pulse += 0.03;
+    const sz = f.type === 'super' ? 7 : 4;
+    const pulseSz = sz + Math.sin(f.pulse) * 1.5;
+    const color = f.type === 'super' ? '#ffdd00' : '#00ff88';
+
+    ctx.beginPath();
+    ctx.arc(f.x, f.y, pulseSz, 0, Math.PI * 2);
+    ctx.fillStyle = color;
+    ctx.fill();
+
+    // glow
+    ctx.beginPath();
+    ctx.arc(f.x, f.y, pulseSz * 3, 0, Math.PI * 2);
+    const fg = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, pulseSz * 3);
+    fg.addColorStop(0, f.type === 'super' ? 'rgba(255,220,0,0.15)' : 'rgba(0,255,136,0.1)');
+    fg.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = fg;
+    ctx.fill();
+  }
+
+  // Organisms
+  for (const o of sim.organisms) {
+    if (!o.alive) continue;
+
+    const r = o.radius;
+    const ageFade = o.ageRatio > 0.7 ? 1 - (o.ageRatio - 0.7) / 0.3 * 0.5 : 1;
+
+    // Trail
+    if (o.trail.length > 1) {
+      ctx.beginPath();
+      ctx.moveTo(o.trail[0].x, o.trail[0].y);
+      for (let i = 1; i < o.trail.length; i++) {
+        ctx.lineTo(o.trail[i].x, o.trail[i].y);
+      }
+      ctx.strokeStyle = o.isPredator ? 'rgba(255,50,100,0.15)' : 'rgba(0,200,255,0.1)';
+      ctx.lineWidth = 1 / cam.zoom;
+      ctx.stroke();
+    }
+
+    // Vision range
+    const showVision = sim.params.visionMode === 'all' ||
+      (sim.params.visionMode === 'selected' && sim.selectedOrganism === o);
+    if (showVision) {
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, o.visionRange, 0, Math.PI * 2);
+      ctx.strokeStyle = o.isPredator ? 'rgba(255,50,100,0.1)' : 'rgba(0,240,255,0.08)';
+      ctx.lineWidth = 1 / cam.zoom;
+      ctx.stroke();
+
+      // Vision cone
+      ctx.beginPath();
+      ctx.moveTo(o.x, o.y);
+      ctx.arc(o.x, o.y, o.visionRange * 0.7, o.angle - 0.6, o.angle + 0.6);
+      ctx.closePath();
+      ctx.fillStyle = o.isPredator ? 'rgba(255,50,100,0.04)' : 'rgba(0,240,255,0.03)';
+      ctx.fill();
+    }
+
+    // Body
+    let bodyColor;
+    const cm = sim.params.colorMode;
+    if (cm === 'genome') bodyColor = o.color;
+    else if (cm === 'energy') bodyColor = hsl(120 * (o.energy / o.maxEnergy), 70, 50);
+    else if (cm === 'age') bodyColor = hsl(120 * (1 - o.ageRatio), 70, 50);
+    else if (cm === 'species') bodyColor = o.isPredator ? '#ff3366' : '#00cc88';
+    else if (cm === 'fitness') bodyColor = hsl(200 + Math.min(o.fitness, 100) * 1.6, 80, 50);
+    else bodyColor = o.color;
+
+    // Outer glow
+    if (o.glowIntensity > 0.05) {
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, r * 3, 0, Math.PI * 2);
+      const glowGrad = ctx.createRadialGradient(o.x, o.y, r, o.x, o.y, r * 3);
+      glowGrad.addColorStop(0, `rgba(0,240,255,${o.glowIntensity * 0.3})`);
+      glowGrad.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = glowGrad;
+      ctx.fill();
+    }
+
+    // Cell membrane
+    ctx.beginPath();
+    ctx.arc(o.x, o.y, r, 0, Math.PI * 2);
+    ctx.fillStyle = bodyColor;
+    ctx.globalAlpha = ageFade;
+    ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // Nucleus
+    ctx.beginPath();
+    ctx.arc(o.x, o.y, r * 0.4, 0, Math.PI * 2);
+    ctx.fillStyle = o.isPredator ? 'rgba(255,100,150,0.6)' : 'rgba(255,255,255,0.3)';
+    ctx.fill();
+
+    // Direction indicator
+    ctx.beginPath();
+    ctx.moveTo(o.x + Math.cos(o.angle) * r, o.y + Math.sin(o.angle) * r);
+    ctx.lineTo(o.x + Math.cos(o.angle) * (r + 6), o.y + Math.sin(o.angle) * (r + 6));
+    ctx.strokeStyle = 'rgba(255,255,255,0.5)';
+    ctx.lineWidth = 2 / cam.zoom;
+    ctx.stroke();
+
+    // Energy bar
+    const barW = r * 2;
+    const barH = 2;
+    const barY = o.y + r + 4;
+    ctx.fillStyle = 'rgba(0,0,0,0.5)';
+    ctx.fillRect(o.x - barW/2, barY, barW, barH);
+    const eRatio = o.energy / o.maxEnergy;
+    ctx.fillStyle = eRatio > 0.5 ? '#00ff88' : eRatio > 0.25 ? '#ffaa00' : '#ff3366';
+    ctx.fillRect(o.x - barW/2, barY, barW * eRatio, barH);
+
+    // Age bar
+    const ageBarY = barY + 3;
+    ctx.fillStyle = 'rgba(0,0,0,0.5)';
+    ctx.fillRect(o.x - barW/2, ageBarY, barW, barH);
+    const aRatio = 1 - o.ageRatio;
+    ctx.fillStyle = aRatio > 0.5 ? '#44ff88' : aRatio > 0.2 ? '#ffaa00' : '#ff3366';
+    ctx.fillRect(o.x - barW/2, ageBarY, barW * aRatio, barH);
+
+    // Selection ring
+    if (sim.selectedOrganism === o) {
+      ctx.beginPath();
+      ctx.arc(o.x, o.y, r + 5, 0, Math.PI * 2);
+      ctx.strokeStyle = '#00f0ff';
+      ctx.lineWidth = 2 / cam.zoom;
+      ctx.setLineDash([4/cam.zoom, 4/cam.zoom]);
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    // Predator marker
+    if (o.isPredator) {
+      ctx.beginPath();
+      const s = r * 0.3;
+      ctx.moveTo(o.x, o.y - s);
+      ctx.lineTo(o.x + s * 0.9, o.y + s * 0.5);
+      ctx.lineTo(o.x - s * 0.9, o.y + s * 0.5);
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(255,255,255,0.7)';
+      ctx.fill();
+    }
+  }
+
+  // Particles
+  for (const p of sim.particles) {
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fillStyle = p.color.replace(/[\d.]+\)$/, p.life + ')');
+    ctx.fill();
+  }
+
+  ctx.restore();
+}
+
+function renderMinimap() {
+  const ctx = minimapCtx;
+  const w = 160, h = 120;
+  const ws = sim.params.worldSize;
+
+  ctx.clearRect(0, 0, w, h);
+  ctx.fillStyle = '#0a0a14';
+  ctx.fillRect(0, 0, w, h);
+
+  // border
+  ctx.strokeStyle = 'rgba(0,240,255,0.2)';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(0.5, 0.5, w-1, h-1);
+
+  // Food as green dots
+  for (const f of sim.foods) {
+    if (!f.alive) continue;
+    ctx.fillStyle = 'rgba(0,255,136,0.4)';
+    ctx.fillRect(f.x / ws * w, f.y / ws * h, 1, 1);
+  }
+
+  // Organisms
+  for (const o of sim.organisms) {
+    if (!o.alive) continue;
+    ctx.fillStyle = o.isPredator ? '#ff3366' : '#00ddff';
+    const s = Math.max(2, o.radius / ws * w * 2);
+    ctx.fillRect(o.x / ws * w - s/2, o.y / ws * h - s/2, s, s);
+  }
+
+  // Camera viewport
+  const cw = mainCanvas.width / devicePixelRatio;
+  const ch = mainCanvas.height / devicePixelRatio;
+  const vpW = (cw / sim.camera.zoom) / ws * w;
+  const vpH = (ch / sim.camera.zoom) / ws * h;
+  const vpX = (sim.camera.x - cw/2/sim.camera.zoom) / ws * w;
+  const vpY = (sim.camera.y - ch/2/sim.camera.zoom) / ws * h;
+  ctx.strokeStyle = 'rgba(0,240,255,0.6)';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(vpX, vpY, vpW, vpH);
+}
+
+// ---- CHARTS ----
+function drawChart(canvasId, datasets, options = {}) {
+  const canvas = document.getElementById(canvasId);
+  const ctx = canvas.getContext('2d');
+  const rect = canvas.parentElement.getBoundingClientRect();
+  canvas.width = rect.width * devicePixelRatio;
+  canvas.height = (rect.height - 24) * devicePixelRatio;
+  ctx.scale(devicePixelRatio, devicePixelRatio);
+
+  const w = rect.width, h = rect.height - 24;
+  ctx.clearRect(0, 0, w, h);
+
+  if (!datasets.length || !datasets[0].data.length) return;
+
+  let allMax = 0;
+  for (const ds of datasets) allMax = Math.max(allMax, ...ds.data);
+  if (allMax === 0) allMax = 1;
+
+  const padding = { left: 30, right: 10, top: 5, bottom: 15 };
+  const chartW = w - padding.left - padding.right;
+  const chartH = h - padding.top - padding.bottom;
+
+  // Y axis labels
+  ctx.fillStyle = '#555566';
+  ctx.font = '9px JetBrains Mono';
+  ctx.textAlign = 'right';
+  ctx.fillText(Math.round(allMax), padding.left - 4, padding.top + 10);
+  ctx.fillText('0', padding.left - 4, h - padding.bottom);
+
+  // Grid lines
+  ctx.strokeStyle = 'rgba(40,40,60,0.3)';
+  ctx.lineWidth = 0.5;
+  for (let i = 0; i <= 4; i++) {
+    const y = padding.top + chartH * i / 4;
+    ctx.beginPath(); ctx.moveTo(padding.left, y); ctx.lineTo(w - padding.right, y); ctx.stroke();
+  }
+
+  for (const ds of datasets) {
+    if (ds.data.length < 2) continue;
+    const len = ds.data.length;
+
+    ctx.beginPath();
+    for (let i = 0; i < len; i++) {
+      const x = padding.left + (i / (len - 1)) * chartW;
+      const y = padding.top + chartH * (1 - ds.data[i] / allMax);
+      if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.strokeStyle = ds.color;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+
+    // Area fill
+    const lastX = padding.left + chartW;
+    const lastY = padding.top + chartH * (1 - ds.data[len-1] / allMax);
+    ctx.lineTo(lastX, padding.top + chartH);
+    ctx.lineTo(padding.left, padding.top + chartH);
+    ctx.closePath();
+    ctx.fillStyle = ds.color.replace('1)', '0.05)');
+    ctx.fill();
+  }
+}
+
+function updateCharts() {
+  drawChart('chartPopulation', [
+    { data: sim.history.herbivores, color: 'rgba(0,255,136,1)' },
+    { data: sim.history.predators, color: 'rgba(255,51,102,1)' },
+    { data: sim.history.food, color: 'rgba(255,170,0,1)' },
+  ]);
+  drawChart('chartGenome', [
+    { data: sim.history.avgSpeed, color: 'rgba(0,240,255,1)' },
+    { data: sim.history.avgSize, color: 'rgba(0,255,136,1)' },
+    { data: sim.history.avgVision, color: 'rgba(255,170,0,1)' },
+  ]);
+  drawChart('chartFitness', [
+    { data: sim.history.avgFitness, color: 'rgba(0,240,255,1)' },
+    { data: sim.history.diversity.map(v => v * 100), color: 'rgba(255,0,170,1)' },
+  ]);
+}
+
+// ---- UI UPDATES ----
+function updateUI() {
+  document.getElementById('phaseIndicator').textContent = sim.phase;
+  document.getElementById('genCounter').textContent = `GEN ${sim.generation}`;
+  document.getElementById('tickCounter').textContent = sim.tick;
+
+  const herbs = sim.organisms.filter(o => !o.isPredator);
+  const preds = sim.organisms.filter(o => o.isPredator);
+  document.getElementById('chipHerbivores').textContent = herbs.length;
+  document.getElementById('chipPredators').textContent = preds.length;
+  document.getElementById('chipFood').textContent = sim.foods.filter(f => f.alive).length;
+  document.getElementById('chipBirths').textContent = sim.totalBirths;
+  document.getElementById('chipDeaths').textContent = sim.totalDeaths;
+
+  // Inspector
+  const sel = sim.selectedOrganism;
+  if (sel && sel.alive) {
+    document.getElementById('inspectorName').textContent = sel.name;
+    document.getElementById('inspectorSpecies').textContent =
+      (sel.isPredator ? '🔴 Drapieżnik' : '🟢 Roślinożerca') + ` — Gen ${sel.generation}`;
+    document.getElementById('inspectorAvatar').style.borderColor = sel.isPredator ? '#ff3366' : '#00f0ff';
+
+    const setGene = (id, val, max, fillId) => {
+      document.getElementById(id).textContent = typeof val === 'number' ? val.toFixed(2) : val;
+      if (fillId) document.getElementById(fillId).style.width = (val / max * 100) + '%';
+    };
+
+    setGene('gSpeed', sel.genome.speed, 1, 'gfSpeed');
+    setGene('gSize', sel.genome.size, 1, 'gfSize');
+    setGene('gVision', sel.genome.vision, 1, 'gfVision');
+    setGene('gMeta', sel.genome.metabolism, 1, 'gfMeta');
+    setGene('gAggro', sel.genome.aggression, 1, 'gfAggro');
+    setGene('gFertility', sel.genome.fertility, 1, 'gfFertility');
+    setGene('gLifespan', sel.maxAge, 2000, 'gfLifespan');
+    setGene('gEnergy', sel.energy.toFixed(0), sel.maxEnergy, 'gfEnergy');
+    setGene('gHue', sel.genome.hue, 1, 'gfHue');
+    setGene('gAge', sel.age, sel.maxAge, 'gfAge');
+    setGene('gFitness', sel.fitness.toFixed(1), 200, 'gfFitness');
+    setGene('gChildren', sel.children, 10, 'gfChildren');
+  }
+
+  // Leaderboard
+  const topOrgs = [...sim.organisms].sort((a,b) => b.fitness - a.fitness).slice(0, 8);
+  const lb = document.getElementById('leaderboard');
+  lb.innerHTML = topOrgs.map((o, i) => `
+    <div class="leaderboard-item" onclick="selectOrganism(${o.id})">
+      <span class="leaderboard-rank">#${i+1}</span>
+      <span class="leaderboard-dot" style="background:${o.color}"></span>
+      <div class="leaderboard-info">
+        <div class="leaderboard-name">${o.isPredator ? '🔴' : '🟢'} ${o.name}</div>
+      </div>
+      <span class="leaderboard-score">${o.fitness.toFixed(0)}</span>
+    </div>
+  `).join('');
+}
+
+const eventLog = [];
+function addEvent(msg) {
+  eventLog.unshift({ msg, time: sim.tick });
+  if (eventLog.length > 50) eventLog.length = 50;
+  const el = document.getElementById('eventLog');
+  el.innerHTML = eventLog.slice(0, 15).map(e =>
+    `<div style="margin-bottom:3px;opacity:${Math.max(0.3,1-(sim.tick-e.time)/500)}"><span style="color:var(--text-dim)">[${e.time}]</span> ${e.msg}</div>`
+  ).join('');
+}
+
+function selectOrganism(id) {
+  sim.selectedOrganism = sim.organisms.find(o => o.id === id) || null;
+}
+
+// ---- CONTROLS ----
+function updateParam(el) {
+  const id = el.id;
+  const val = el.type === 'range' ? parseFloat(el.value) : el.value;
+  const displayId = 'v' + id.charAt(1).toUpperCase() + id.slice(2);
+  const displayEl = document.getElementById(displayId);
+  if (displayEl) displayEl.textContent = val;
+
+  const paramMap = {
+    sWorldSize: 'worldSize', sFriction: 'friction', sPopulation: 'population',
+    sMutationRate: 'mutationRate', sMutationStrength: 'mutationStrength', sElitism: 'elitism',
+    sFoodCount: 'foodCount', sFoodEnergy: 'foodEnergy', sFoodRespawn: 'foodRespawn',
+    sPredators: 'predators', sPredatorBonus: 'predatorBonus', sHiddenNeurons: 'hiddenNeurons',
+    sVisionMode: 'visionMode', sColorMode: 'colorMode', sTrails: 'trails',
+  };
+
+  if (paramMap[id]) sim.params[paramMap[id]] = val;
+}
+
+function togglePause() {
+  sim.paused = !sim.paused;
+  document.getElementById('btnPlayPause').textContent = sim.paused ? '▶ Start' : '⏸ Pauza';
+}
+
+function setSpeed(s) {
+  sim.speed = s;
+  document.querySelectorAll('.speed-btn').forEach(b => {
+    b.classList.toggle('active', parseFloat(b.textContent) === s);
+  });
+}
+
+function resetSimulation() {
+  initSimulation();
+  sim.generation = 0;
+  addEvent('🔄 Symulacja zresetowana');
+}
+
+// ---- CAMERA CONTROLS ----
+let isDragging = false, dragStart = { x: 0, y: 0 }, camStart = { x: 0, y: 0 };
+
+mainCanvas.addEventListener('mousedown', e => {
+  isDragging = true;
+  dragStart = { x: e.clientX, y: e.clientY };
+  camStart = { x: sim.camera.x, y: sim.camera.y };
+});
+
+window.addEventListener('mousemove', e => {
+  if (!isDragging) return;
+  sim.camera.x = camStart.x - (e.clientX - dragStart.x) / sim.camera.zoom;
+  sim.camera.y = camStart.y - (e.clientY - dragStart.y) / sim.camera.zoom;
+});
+
+window.addEventListener('mouseup', e => {
+  if (isDragging && Math.hypot(e.clientX - dragStart.x, e.clientY - dragStart.y) < 5) {
+    // Click — select organism
+    const rect = mainCanvas.getBoundingClientRect();
+    const sx = e.clientX - rect.left;
+    const sy = e.clientY - rect.top;
+    const wp = screenToWorld(sx, sy);
+
+    let closest = null, closestDist = 30 / sim.camera.zoom;
+    for (const o of sim.organisms) {
+      if (!o.alive) continue;
+      const d = dist(wp.x, wp.y, o.x, o.y);
+      if (d < closestDist) { closest = o; closestDist = d; }
+    }
+    sim.selectedOrganism = closest;
+  }
+  isDragging = false;
+});
+
+mainCanvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  const zoomFactor = e.deltaY > 0 ? 0.9 : 1.1;
+  sim.camera.targetZoom = clamp(sim.camera.targetZoom * zoomFactor, 0.1, 3);
+}, { passive: false });
+
+// ---- FPS COUNTER ----
+let lastFrameTime = performance.now();
+let frameCount = 0;
+let fps = 60;
+
+// ---- MAIN LOOP ----
+function mainLoop(timestamp) {
+  requestAnimationFrame(mainLoop);
+
+  if (!sim.running) return;
+
+  frameCount++;
+  if (timestamp - lastFrameTime >= 1000) {
+    fps = frameCount;
+    frameCount = 0;
+    lastFrameTime = timestamp;
+    document.getElementById('chipFps').textContent = fps;
+  }
+
+  // Smooth zoom
+  sim.camera.zoom = lerp(sim.camera.zoom, sim.camera.targetZoom, 0.1);
+
+  if (!sim.paused) {
+    const steps = Math.min(Math.round(sim.speed), 20);
+    for (let i = 0; i < steps; i++) updateSimulation();
+  }
+
+  // Follow selected
+  if (sim.selectedOrganism && sim.selectedOrganism.alive) {
+    sim.camera.x = lerp(sim.camera.x, sim.selectedOrganism.x, 0.05);
+    sim.camera.y = lerp(sim.camera.y, sim.selectedOrganism.y, 0.05);
+  }
+
+  renderWorld();
+  renderMinimap();
+
+  if (sim.tick % 10 === 0) updateUI();
+  if (sim.tick % 100 === 0) updateCharts();
+}
+
+// ---- START ----
+function startSimulation() {
+  document.getElementById('introOverlay').classList.add('hidden');
+  resizeCanvas();
+  initSimulation();
+  sim.running = true;
+  addEvent('🚀 NeuroGenesis Lab uruchomiony!');
+  updateCharts();
+}
+
+window.addEventListener('resize', resizeCanvas);
+requestAnimationFrame(mainLoop);
+
+// Keyboard shortcuts
+window.addEventListener('keydown', e => {
+  if (e.key === ' ') { e.preventDefault(); togglePause(); }
+  if (e.key === 'r') resetSimulation();
+  if (e.key === '1') setSpeed(1);
+  if (e.key === '2') setSpeed(2);
+  if (e.key === '5') setSpeed(5);
+});
+</script>
+</body>
+</html>
