@@ -1,279 +1,84 @@
-
-Historia
-Zobacz wszystko
-
-
-Wpadłem na pomysł, że może stworzymy algorytm genetyczny, ładna wizualizacje? Czy jest to w ogóle możliwe w github? Później udostępnić jako github pages? Kiedyś mój znajomy tworzył bardzo fajny prezent jekt zaraz ci podeślę - " Sylwestrowe kodowanie nie jest złe ... 🥳
-2500 cząsteczek z własnym DNA (kolor, rozmiar, zachowanie) rozpoczyna w całkowitym chaosie. Każda ma przypisany cel - punkt w napisie "2026". Stopniowo, jak w prawdziwej ewolucji, z chaosu wyłania się porządek.
-
-Fazy:
-- CHAOS - cząsteczki błądzą losowo, zachodzą intensywne mutacje
-- EWOLUCJA - pojawia się słabe "przyciąganie" do celów, cząsteczki zaczynają wędrować organicznymi trajektoriami
-- KONWERGENCJA - ruch staje się coraz bardziej uporządkowany
-- STABILIZACJA - napis "2026" jest gotowy
-
-Każdy organizm posiada genom z kilkoma genami:
-- Barwa, nasycenie, jasność - determinują kolor
-- Rozmiar - jak duży jest organizm
-- Prędkość - jak szybko się porusza
-- Metabolizm - jak efektywnie zbiera energię z odbić
-- Płodność - jak łatwo osiąga próg podziału
-- Długość życia - ile sekund przeżyje
-
-Zbieranie energii
-- Organizmy odbijają się od ścian i liter napisu "2026" - każde odbicie to źródło energii - jak jedzenie dla komórki. Żółty pasek pod organizmem pokazuje poziom energii.
-- Mitoza (podział komórkowy) - gdy organizm zbierze wystarczająco dużo energii, dzieli się na dwa potomki:
-
-Rodzic "umiera" (transformuje się):
-- Powstają dwoje dzieci, każde z 75% rozmiaru rodzica
-- Potomkowie dziedziczą DNA z mutacjami - mogą mieć inny kolor, prędkość, metabolizm...
-- Dzieci rozlatują się w przeciwnych kierunkach
-
-Starzenie i śmierć:
-- Każdy organizm ma ograniczoną długość życia (gen lifespan, średnio ~20 sekund):
-- Po 70% życia zaczyna się starzenie - organizm blednie, zwalnia, zbiera mniej energii
-- Po 80% życia nie może się już rozmnażać
-- Na końcu życia organizm umiera - kurczy się, wypuszcza iskry unoszące się w górę (dusza!), i znika
-- Zielony pasek pod organizmem pokazuje pozostałe życie (zielony → żółty → czerwony) " , oraz - " Zabawa algorytmami genetycznymi ciąg dalszy. Oczywiście dla zabawy i poznania tematu.
-
-🤜Eksperyment na filmie🤛
-Początek to 50 (populacja) stworzeń (grafy 5-8 węzłów). Cel - nauka zdobywania dystansu (w prawo) - miara oceny fitness.
-
-Węzły - rozmiar to masa, kolor to geny osobnika (na początku różne). Połączenia to mięśnie o swojej sprężystości - zielony mięsień to rozciąganie, czerwony skurczony. Zaimplementowana podstawowa fizyka - przyciąganie ziemskie, kolizja z ziemią, tarcie, modelowana sprężystość (mięsień kurczy się i rozciąga sinusoidalnie w czasie).
-
-Po każdej generacji (500 ruchów) następuje:
-1. wybór jest TOP8 (elitaryzm) - w kolejnej rundzie muszą udowodnić, że są rzeczywiście dobre (nie dotykamy genów)
-2. 42x losuję po 2 osobników z TOP20 (reszta ginie jako słaba, ślepa uliczka genetyczna).
-3. Proces krzyżowania (crossover):
-A. w p=0.75 biorę genomy poszczególnych osobników o1 i o2 i z p=0.5 wybieram 42 nowe osobniki (potomstwo).
-B. w p=0.25 kopiuję osobnika o1
-C. dla wyjściowego dziecka d -> robię mutację losowych składników genomu (rate mutacji 0.6 - dużo mutacji, szybka eksploracja)
-
-Kolory zmieniają się (na początku oznaczają unikatowe geny - 50 kolorów) bo potomkowie dziedziczą średnią kolorów rodziców. Na końcu jak widać wiele jest czerwonych - spada różnorodność genetyczna.
-
-Na początku stworzenia nie bardzo wiedzą co robić (niektóre idą w lewo). Później stopniowo przejmują najlepsze geny (krzyżowanie) i rozwijają swoje strategie na zdobycie jak największego dystansu. Jak widać zmienia się nie tylko rozmiar masy (węzły) ale w związku z tym musi się zmienić rozmiar mięśni. Stworzenia nie tylko toczą się ale również skaczą.
-
-Genom:
-- liczba węzłów (5-8)
-- rozmiar ciała (35-60)
-- kąty węzłów
-- odległości nodów od środka
-- promienie węzłów
-
-- szybkość oscylacji mięśni
-- globalne przesunięcie fazy
-
-- siła skurczu każdego mięśnia
-- faza każdego mięśnia
-- sztywność każdego mięśnia " Oczywiście nie chcę niczego kopiować, przesyłam ci to dla inspiracji. Wszystko chciałbym aby działało na github, połączone z github pages, bez hostowania backendu lokalnie.
-Genetic Evolution Lab
-Wygenerowana aplikacja
-
-
-Stworzyłem interaktywną wizualizację algorytmu genetycznego, gdzie organizmy ewoluują, ucząc się docierać do celu! 🧬
-
-Kluczowe cechy:
-
-100% client-side - działa bez backendu, idealny na GitHub Pages
-
-Pełna kontrola parametrów - populacja, mutacja, elitaryzm, prędkość
-
-Wizualizacja ewolucji - obserwuj jak chaos zamienia się w porządek
-
-4 fazy rozwoju - CHAOS → EWOLUCJA → KONWERGENCJA → STABILIZACJA
-
-System genomu - pozycja, prędkość, rozmiar, kolor, przyciąganie
-
-Elitaryzm - najlepsze organizmy (pomarańczowe) zachowywane między generacjami
-
-Statystyki real-time - generacja, fitness, liczba żywych
-
-Jak wdrożyć na GitHub Pages:
-
-Stwórz nowe repo: genetic-evolution-lab
-
-Dodaj ten plik jako index.html
-
-Settings → Pages → Deploy from branch main
-
-Gotowe! Dostępne pod: username.github.io/genetic-evolution-lab
-
-Inspirowane projektami, które mi pokazałeś - organizmy mają DNA, uczą się przez selekcję naturalną, mutują i ewoluują! 🎯
-
-ale mi chodzi o coś więcej, o coś bardziej złożonego, profesjonalnego, to ma być mój projekt pokazowy, który zrobi WOW! A nie o prosta animacje, postara się bardzo, bo zależy mi na tym projekcie, bądź bardzo kreatywny, innowacyjny. czekam na twoje kreatywne pomysły.
-index
-Wygenerowany plik
-
-LICENSE
-Wygenerowany plik
-
-README
-Wygenerowany plik
-
-Oto NeuroGenesis Lab — kompletny, profesjonalny symulator ewolucyjny gotowy do wdrożenia na GitHub Pages! 🧬
-
-Co stworzyłem
-To nie jest prosta animacja — to pełnoprawny ekosystem sztucznej inteligencji w jednym pliku HTML (~60KB), który działa bez backendu.
-
-🧠 Architektura systemu
-Każdy organizm posiada feedforward neural network (sieć neuronową) jako mózg:
-
-12 wejść — percepcja otoczenia (kierunek do jedzenia, odległość, zagrożenia, stan energii, wiek, pozycja, zegar wewnętrzny)
-
-8 ukrytych neuronów z aktywacją tanh
-
-4 wyjścia — skręt lewo/prawo, przyspieszenie, hamowanie
-
-Mózg ewoluuje razem z ciałem — wagi sieci neuronowej mutują i krzyżują się przy reprodukcji.
-
-🧬 Złożony genom (12 genów)
-Prędkość, rozmiar, wzrok, metabolizm, agresja, płodność, żywotność, barwa, nasycenie, jasność, obrona, ciekawość — wszystkie geny wpływają na fizyczny koszt przeżycia.
-
-🌿 Dynamika ekosystemu drapieżnik–ofiara
-Roślinożercy — zbierają jedzenie (normalne + super-rzadkie 3×), rozmnażają się
-
-Drapieżniki — polują na roślinożerców, zdobywają energię z zabójstw
-
-Organizm z genem agresji >0.85 ma 5% szans stać się drapieżnikiem przy rozrodzie — specjacja emergentna!
-
-System awaryjnego respawnu, gdy populacja zbyt spadnie
-
-🎨 Profesjonalny UI
-Element	Opis
-Panel lewy	20+ parametrów do regulacji w czasie rzeczywistym
-Główne okno	Canvas 2D ze światem, kamera (pan/zoom/follow)
-Minimapa	Podgląd całego świata z viewportem
-Inspektor	Kliknij organizm → zobacz cały genom, energię, wiek
-Ranking	Top 8 organizmów wg fitness
-3 wykresy	Populacja, średni genom, fitness & różnorodność
-Dziennik zdarzeń	Log narodzin, zgonów, zabójstw
-Intro screen	Profesjonalny ekran powitalny
-⚡ Efekty wizualne
-Pola widzenia (stożkowe) organizmów
-
-System cząsteczek (narodziny = cyan, śmierć = fiolet, jedzenie = zielone, zabójstwo = czerwone)
-
-Pulsujące jedzenie, ślady ruchu, poświata przy zbieraniu energii
-
-5 trybów kolorów (genom DNA, energia, wiek, gatunek, fitness)
-
-Paski energii i życia pod każdym organizmem
-
-🎮 Sterowanie
-Przeciąganie — przesuń kamerę
-
-Scroll — zoom in/out
-
-Klik — zaznacz i śledź organizm
-
-Space — pauza | R — reset | 1/2/5 — prędkość
-
-🚀 Wdrożenie na GitHub Pages
-Pobierz pliki i wykonaj:
-
-bash
-git init neurogenesis-lab
-cd neurogenesis-lab
-# skopiuj index.html, README.md, LICENSE
-git add .
-git commit -m "🧬 NeuroGenesis Lab v2.0"
-git remote add origin https://github.com/TWOJ-USER/neurogenesis-lab.git
-git push -u origin main
-Potem Settings → Pages → Deploy from main i gotowe! Całość to jeden plik index.html — zero zależności, zero backendu.
-
-📂 Pliki do pobrania
-Główna aplikacja:
-
-Dokumentacja README:
-
-Licencja MIT:
-
-💡 Co wyróżnia ten projekt?
-W porównaniu do typowych symulacji genetycznych (jak genetic walkers czy circle evolution), ten projekt łączy wszystkie zaawansowane mechanizmy w jednym:
-
-Sieci neuronowe + genetyka — nie tylko geny ciała, ale i mózg ewoluuje
-
-Ekosystem z dwoma gatunkami — emergentna dynamika drapieżnik-ofiara
-
-Profesjonalny dashboard — wygląda jak prawdziwe narzędzie naukowe, nie zabawka
-
-Pełna interaktywność — 20+ parametrów, inspekcja, śledzenie, zoom
-
-Zero zależności — wszystko w jednym pliku HTML, gotowe do GitHub Pages
-
-4 fazy ewolucji — CHAOS → EWOLUCJA → KONWERGENCJA → STABILIZACJA
-
-To projekt, który naprawdę robi WOW na portfolio — łączy AI, biologię, fizykę i wizualizację danych w jednym interaktywnym doświadczeniu. 🎯
-
-Przygotowane przez Deep Research
-to już wygląda o wiele lepiej, ale rozwijamy nadal, zachowajmy to co mamy, rozwijajmy nadal, chciałbym abyś dodał profesjonalną wizualizację, oprócz wykresów, chciałbym aby wizualizacja ukazywała kompletny proces
-index
-Wygenerowany plik
-
-Projekt znacząco rozbudowany o 6 zupełnie nowych warstw wizualizacji, które razem ukazują kompletny proces ewolucji. Oto co zostało dodane:
-
-🆕 Nowe wizualizacje procesu ewolucji
-1. 🌐 Przestrzeń Genomowa — PCA (Genome Space)
-Każdy organizm to punkt w 2D przestrzeni genotypów — oś X to mobilność (speed + vision), oś Y to siła (size + aggression). Widzisz na żywo jak populacja rozdziela się na klastry gatunkowe — dywergencja ewolucyjna w czasie rzeczywistym. Złota aureola = wysoki fitness.
-
-2. 🌊 Rozkład Genów — Violin Plot
-Dla 5 kluczowych genów (speed, size, vision, metabolism, aggression) pokazuje rozkład wartości w populacji jako violin chart. Widzisz kiedy populacja jest urozmaicona (szeroki rozkład) vs wyspecjalizowana (wąski peak) — esencja doboru naturalnego.
-
-3. 🔥 Heatmapa Aktywności Terenu
-Przełączalna mapa cieplna (jedzenie / zgony / narodziny) nałożona bezpośrednio na świat. Pokazuje gdzie toczy się życie — strefy polowań, miejsca śmierci, obszary rozrodu. Dane zanikają z czasem (decay), więc pokazują aktualną aktywność.
-
-4. ⚡ Wizualizacja Mózgu NN — na żywo
-Kliknij dowolny organizm → prawy panel (zakładka DNA) pokazuje jego sieć neuronową w akcji. Każdy neuron świeci cyan (aktywny +) lub magenta (aktywny −), krawędzie ważone. Widać dokładnie jak organizm podejmuje decyzje ruchowe w każdym ticku.
-
-5. 🌳 Drzewo Genealogiczne — Phylogeny Tree
-Zakładka "Drzewo" w prawym panelu pokazuje drzewo rodowodowe ostatnich 180 organizmów. Węzły ułożone wg generacji (oś X), pozycja wg numeracji (oś Y). Rozmiar węzła = fitness. Widać linie rodowodowe, specjację, kiedy drapieżniki się odgałęziają.
-
-6. 🗂️ System zakładek w panelu prawym
-Cztery zakładki zamiast jednej listy: 🔬 DNA (inspektor + live NN), 🏆 Top (ranking), 🌳 Drzewo (phylogeny), 📜 Log (dziennik zdarzeń).
-
-Kompletny obraz procesu
-Teraz projekt pokazuje ewolucję na wszystkich poziomach jednocześnie:
-
-Poziom	Wizualizacja
-Indywidualny	Inspektor DNA + aktywacja NN na żywo
-Populacyjny	Wykresy liniowe populacji, genomu, fitness
-Przestrzeń genotypów	PCA scatter plot — klastry i dywergencja
-Rozkład cech	Violin plot — selekcja naturalna w genach
-Przestrzenny	Heatmapa aktywności terenu
-Historyczny	Drzewo genealogiczne — linie rodowodowe
-Ekosystem	Minimap + główny świat z trybami kolorów
-Przygotowano przy użyciu Claude Sonnet 4.6
-
-
-index
 <!DOCTYPE html>
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NeuroGenesis Lab v3.0</title>
+<title>NeuroGenesis Lab — Evolutionary Ecosystem Simulator</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
-  --bg0:#07070f;--bg1:#0e0e1c;--bg2:#141428;--bg3:#1a1a35;
-  --cyan:#00f0ff;--mag:#ff00aa;--grn:#00ff88;--org:#ff8800;--red:#ff3055;--yel:#ffe000;
-  --txt:#e2e2f0;--txt2:#8888aa;--txt3:#44445a;
-  --bdr:#1e1e38;
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-tertiary: #1a1a2e;
+  --accent-cyan: #00f0ff;
+  --accent-magenta: #ff00aa;
+  --accent-green: #00ff88;
+  --accent-orange: #ff8800;
+  --accent-red: #ff3366;
+  --text-primary: #e8e8f0;
+  --text-secondary: #8888aa;
+  --text-dim: #555566;
+  --border: #2a2a3e;
+  --glow-cyan: 0 0 20px rgba(0,240,255,0.3);
+  --glow-magenta: 0 0 20px rgba(255,0,170,0.3);
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100vw;height:100vh;overflow:hidden;background:var(--bg0);color:var(--txt);font-family:'Inter',sans-serif}
 
-/* ── LAYOUT ── */
-.root{display:grid;grid-template-rows:52px 1fr;height:100vh}
-.main{display:grid;grid-template-columns:272px 1fr 300px;overflow:hidden}
+* { margin:0; padding:0; box-sizing:border-box; }
 
-/* ── TOPBAR ── */
-.topbar{background:var(--bg1);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;padding:0 18px;gap:16px;z-index:10}
-.logo{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;background:linear-gradient(90deg,var(--cyan),var(--mag));-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:2px}
-.logo-sub{font-size:9px;color:var(--txt3);letter-spacing:3px;text-transform:uppercase;margin-top:-2px}
-.topbar-center{display:flex;align-items:center;gap:20px}
-.phase-pill{font-family:'JetBrains Mono',monospace;font-size:11px;padding:5px 18px;border-radius:30px;border:1px solid var(--cyan);color:var(--cyan);letter-spacing:2px;text-transform:uppercase;animation:pillGlow 2s ease-in-out infinite}
-@keyframes pillGlow{0%,100%{box-shadow:0 0 6px rgba(0,240,255,.2)}50%{box-shadow:0 0 22px rgba(0,240,255,.5)}}
-.counter{text-align:center}
-.counter .num{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:var(--cyan);line-height:1}
-.counter .lbl{font-size:9px;color:var(--txt3);text-transform:uppercase;letter-spa
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* ===== LAYOUT ===== */
+.app-container {
+  display: grid;
+  grid-template-columns: 300px 1fr 320px;
+  grid-template-rows: 56px 1fr 180px;
+  height: 100vh;
+  gap: 1px;
+  background: var(--border);
+}
+
+/* ===== HEADER ===== */
+.header {
+  grid-column: 1 / -1;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  width: 32px; height: 32px;
+  position: relative;
+}
+
+.logo-icon .dna-helix {
+  animation: rotateDNA 4s linear infinite;
+}
+
+@keyframes rotateDNA { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+
+.logo h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: upperc
