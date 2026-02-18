@@ -1,0 +1,582 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/57bb84721f950176632019fcd0784597/0b9931d6-1c68-42f1-9d0d-9182820db545/canvas-app/index.html?AWSAccessKeyId=ASIA2F3EMEYEQ5TG6S4Q&Signature=x6OnzjjWeVdgCYTINZRzB8Q9Imc%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEKL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIC4PStZ6dktzo0QWAQRPfxoqZBEmxTJiKJg50pmvB1NVAiEAibKFZcEhw2JcyON6JVLjqsjXcrkIONoPBKu%2BBb3A4osq8wQIaxABGgw2OTk3NTMzMDk3MDUiDEvmKdFTv8AOJI%2B3TSrQBEQUaCKQozo1TJGoT9hhVYb8XwLlkiAh9bihH%2FQSeqZinbBYe4M%2Fz%2BnQ7Us4n8IrmABDqrOpl%2FFgH3A5rGJjkMfatgRlj13GQXnM4ItHofERSYn1JG6sa%2FxyqoLse7si1%2FYa7xh3HUUIF9sCD4fF0IOPVFfD%2Faep8J1u9wYJoa0ZJ%2FZpguUcn5a%2BfHgdRx9aZLBQRw0xAZfpuyDZBvyDI3WyhwSj0jrW%2BUz7vYiPAiQitt%2Fp58surNWwgS%2Fpiirb%2FIKSjNsNiNMwkzUIEYIG6FIG9fYB8q7BLS0APc5UMXz1RAI6UNtRythhgz25JLhzqUUniVgMRW8iQ9FFn1FXZePUhHllXbiIO2gVu2i7SjEucq9zAKPmsyV6NLNyGLXOc4wX6QUQyy%2BodpEFpiwl1yiQc3rdqVEeJxMA019nXfKW9CiZ9uCx7GEq5iWl0nOniznPmq35spkmGlaBf4YS3jAumsjH7uacHZ3efwVmI%2F6r6De%2FZpaHFvygN50F4w2vavLcSnX0nFAuzS8SFAm0Ec%2FkzI3T7hDBQg14VE4tZe4otJY3LlRc7TCEhji5wNInQu0fkLSXn2WkJ%2BlbcsyCz%2BAnJ7UUQ%2FqeIkhK%2BOsVJYbdfDFKntgVQn%2FS8htIygvgxiGAnVHkxoGmsdne7jGO%2FP1X9czusIi%2BhQzeJ6unUGUo%2BXOte9%2F5pissG8arLmvDrA9C4AjlaIHnh5%2BolbJ0sXd2LkQx2K8Oqn0sw18XzG82H1gxvBzygc9pAJv1O22XnZnrICusoyjC%2BFWcNp8wUy8w9fLXzAY6mAFbvP0ITW269XSsGtS6TcijQKJ%2FQs24ouuEupA3XNs7qE41tj%2FZOm1qyU2pRnYs0ZS9Nu%2F3bQSReWzyRC03JuSpeczGUR9SkBeIupKATfGxpDI1GtEKWzoMaeX2IYqySUYDFh1yXz6fvuYrkIyVMw%2F2O4RQZeNeewqV2UqnDAyoIviDCGq5pIcn7saz%2F4XS%2FoE5xUkc148n3Q%3D%3D&Expires=1771440902&rnd=1771437374910&utm_source=perplexity
+Subject: =?utf-8?Q?NeuroGenesis=20Lab=20v3.0=20=E2=80=94=20Evolutionary=20Ecosyste?=
+ =?utf-8?Q?m=20Simulator?=
+Date: Wed, 18 Feb 2026 18:56:29 +0100
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--KeAmzSHy6x8A6gQ37naCMCWowYmrKsIAVYwVD8SLKh----"
+
+
+------MultipartBoundary--KeAmzSHy6x8A6gQ37naCMCWowYmrKsIAVYwVD8SLKh----
+Content-Type: text/html
+Content-ID: <frame-C01EB10FE13E86E974F6C7E77358C8F6@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/57bb84721f950176632019fcd0784597/0b9931d6-1c68-42f1-9d0d-9182820db545/canvas-app/index.html?AWSAccessKeyId=ASIA2F3EMEYEQ5TG6S4Q&Signature=x6OnzjjWeVdgCYTINZRzB8Q9Imc%3D&x-amz-security-token=IQoJb3JpZ2luX2VjEKL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIC4PStZ6dktzo0QWAQRPfxoqZBEmxTJiKJg50pmvB1NVAiEAibKFZcEhw2JcyON6JVLjqsjXcrkIONoPBKu%2BBb3A4osq8wQIaxABGgw2OTk3NTMzMDk3MDUiDEvmKdFTv8AOJI%2B3TSrQBEQUaCKQozo1TJGoT9hhVYb8XwLlkiAh9bihH%2FQSeqZinbBYe4M%2Fz%2BnQ7Us4n8IrmABDqrOpl%2FFgH3A5rGJjkMfatgRlj13GQXnM4ItHofERSYn1JG6sa%2FxyqoLse7si1%2FYa7xh3HUUIF9sCD4fF0IOPVFfD%2Faep8J1u9wYJoa0ZJ%2FZpguUcn5a%2BfHgdRx9aZLBQRw0xAZfpuyDZBvyDI3WyhwSj0jrW%2BUz7vYiPAiQitt%2Fp58surNWwgS%2Fpiirb%2FIKSjNsNiNMwkzUIEYIG6FIG9fYB8q7BLS0APc5UMXz1RAI6UNtRythhgz25JLhzqUUniVgMRW8iQ9FFn1FXZePUhHllXbiIO2gVu2i7SjEucq9zAKPmsyV6NLNyGLXOc4wX6QUQyy%2BodpEFpiwl1yiQc3rdqVEeJxMA019nXfKW9CiZ9uCx7GEq5iWl0nOniznPmq35spkmGlaBf4YS3jAumsjH7uacHZ3efwVmI%2F6r6De%2FZpaHFvygN50F4w2vavLcSnX0nFAuzS8SFAm0Ec%2FkzI3T7hDBQg14VE4tZe4otJY3LlRc7TCEhji5wNInQu0fkLSXn2WkJ%2BlbcsyCz%2BAnJ7UUQ%2FqeIkhK%2BOsVJYbdfDFKntgVQn%2FS8htIygvgxiGAnVHkxoGmsdne7jGO%2FP1X9czusIi%2BhQzeJ6unUGUo%2BXOte9%2F5pissG8arLmvDrA9C4AjlaIHnh5%2BolbJ0sXd2LkQx2K8Oqn0sw18XzG82H1gxvBzygc9pAJv1O22XnZnrICusoyjC%2BFWcNp8wUy8w9fLXzAY6mAFbvP0ITW269XSsGtS6TcijQKJ%2FQs24ouuEupA3XNs7qE41tj%2FZOm1qyU2pRnYs0ZS9Nu%2F3bQSReWzyRC03JuSpeczGUR9SkBeIupKATfGxpDI1GtEKWzoMaeX2IYqySUYDFh1yXz6fvuYrkIyVMw%2F2O4RQZeNeewqV2UqnDAyoIviDCGq5pIcn7saz%2F4XS%2FoE5xUkc148n3Q%3D%3D&Expires=1771440902&rnd=1771437374910&utm_source=perplexity
+
+<!DOCTYPE html><html lang="pl"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-ab15e0b6-558a-44f7-9a95-84cbbb4bfe82@mhtml.blink" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NeuroGenesis Lab v3.0 — Evolutionary Ecosystem Simulator</title>
+
+</head>
+<body>
+
+<div class="intro" id="intro">
+  <div class="intro-box">
+    <div class="intro-icon">🧬</div>
+    <div class="intro-title">NeuroGenesis Lab</div>
+    <p class="intro-desc">Zaawansowany symulator ekosystemu ewolucyjnego z algorytmem genetycznym, sieciami neuronowymi i pełną wizualizacją procesu — działa w 100% w przeglądarce.</p>
+    <div class="intro-feats">
+      <div class="feat"><span class="fi">🧠</span>Sieci neuronowe sterujące ruchem</div>
+      <div class="feat"><span class="fi">🧬</span>12-genowy DNA z mutacją</div>
+      <div class="feat"><span class="fi">🌿</span>Drapieżnik–ofiara + zasoby</div>
+      <div class="feat"><span class="fi">📊</span>Wykresy populacji &amp; genomu</div>
+      <div class="feat"><span class="fi">🌐</span>Przestrzeń genomowa PCA</div>
+      <div class="feat"><span class="fi">🌳</span>Drzewo genealogiczne</div>
+      <div class="feat"><span class="fi">🔥</span>Heatmapa aktywności</div>
+      <div class="feat"><span class="fi">📱</span>Responsywność mobile/desktop</div>
+    </div>
+    <button class="btn-launch">Rozpocznij Ewolucję →</button>
+  </div>
+</div>
+
+<div class="root">
+  <div class="topbar">
+    <div class="logo-wrap">
+      <div class="logo">NEUROGENESIS LAB</div>
+      <div class="logo-sub">Evolutionary Ecosystem Simulator · v3.0</div>
+    </div>
+    <div class="topbar-center">
+      <div class="phase-pill" id="phaseEl">INICJALIZACJA</div>
+      <div class="counter"><div class="num" id="genEl">0</div><div class="lbl">Generacja</div></div>
+      <div class="counter"><div class="num" id="tickEl" style="font-size:12px">0</div><div class="lbl">Tick</div></div>
+      <div class="counter"><div class="num" id="popEl" style="color:var(--grn);font-size:14px">0</div><div class="lbl">Populacja</div></div>
+      <div class="counter"><div class="num" id="birthEl" style="color:var(--cyan);font-size:12px">0</div><div class="lbl">Narodziny</div></div>
+      <div class="counter"><div class="num" id="deathEl" style="color:var(--red);font-size:12px">0</div><div class="lbl">Zgony</div></div>
+    </div>
+    <div class="topbar-right">
+      <div class="spd">
+        <button class="spd-btn">0.5x</button>
+        <button class="spd-btn on">1x</button>
+        <button class="spd-btn">3x</button>
+        <button class="spd-btn">8x</button>
+        <button class="spd-btn">20x</button>
+      </div>
+      <button class="btn btn-accent" id="ppBtn">⏸ Pauza</button>
+      <button class="btn btn-red">↺ Reset</button>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--txt3)">FPS:<span id="cFPS">60</span></span>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="mobile-toggle" style="display: flex;" id="mobileToggle">
+      <button id="btnWorld" class="on">🌍 Świat</button>
+      <button id="btnLeft">⚙ Parametry</button>
+      <button id="btnRight">📊 Dane</button>
+    </div>
+
+    <div class="panel-left-wrapper on" id="leftWrapper">
+      <div class="panel">
+        <div class="sec">
+          <div class="sec-title"><span class="dot"></span>Świat</div>
+          <div class="pr"><label>Rozmiar świata</label><span class="v" id="vWorldSize">3000</span></div>
+          <input type="range" id="sWorldSize" min="1500" max="6000" value="3000" step="500">
+          <div class="pr"><label>Tarcie</label><span class="v" id="vFriction">0.97</span></div>
+          <input type="range" id="sFriction" min="0.9" max="0.999" value="0.97" step="0.001">
+        </div>
+        <div class="sec">
+          <div class="sec-title"><span class="dot" style="background:var(--mag)"></span>Genetyka</div>
+          <div class="pr"><label>Populacja startowa</label><span class="v" id="vPopulation">80</span></div>
+          <input type="range" id="sPopulation" min="20" max="200" value="80" step="10">
+          <div class="pr"><label>Wskaźnik mutacji</label><span class="v" id="vMutationRate">0.15</span></div>
+          <input type="range" id="sMutationRate" min="0.01" max="0.5" value="0.15" step="0.01">
+          <div class="pr"><label>Siła mutacji</label><span class="v" id="vMutationStrength">0.3</span></div>
+          <input type="range" id="sMutationStrength" min="0.05" max="1.0" value="0.3" step="0.05">
+          <div class="pr"><label>Elitaryzm (Top N)</label><span class="v" id="vElitism">5</span></div>
+          <input type="range" id="sElitism" min="0" max="20" value="5" step="1">
+        </div>
+        <div class="sec">
+          <div class="sec-title"><span class="dot" style="background:var(--grn)"></span>Zasoby</div>
+          <div class="pr"><label>Ilość jedzenia</label><span class="v" id="vFoodCount">120</span></div>
+          <input type="range" id="sFoodCount" min="20" max="400" value="120" step="10">
+          <div class="pr"><label>Wartość energetyczna</label><span class="v" id="vFoodEnergy">40</span></div>
+          <input type="range" id="sFoodEnergy" min="10" max="100" value="40" step="5">
+          <div class="pr"><label>Prędkość odradzania</label><span class="v" id="vFoodRespawn">0.03</span></div>
+          <input type="range" id="sFoodRespawn" min="0.005" max="0.1" value="0.03" step="0.005">
+        </div>
+        <div class="sec">
+          <div class="sec-title"><span class="dot" style="background:var(--red)"></span>Drapieżniki</div>
+          <div class="pr"><label>Drapieżników startowo</label><span class="v" id="vPredators">8</span></div>
+          <input type="range" id="sPredators" min="0" max="30" value="8" step="1">
+          <div class="pr"><label>Bonus za zabójstwo</label><span class="v" id="vPredatorBonus">60</span></div>
+          <input type="range" id="sPredatorBonus" min="20" max="150" value="60" step="10">
+        </div>
+        <div class="sec">
+          <div class="sec-title"><span class="dot" style="background:var(--org)"></span>Sieć neuronowa</div>
+          <div class="pr"><label>Ukryte neurony</label><span class="v" id="vHiddenNeurons">8</span></div>
+          <input type="range" id="sHiddenNeurons" min="4" max="16" value="8" step="1">
+        </div>
+        <div class="sec">
+          <div class="sec-title"><span class="dot" style="background:var(--yel)"></span>Wizualizacja</div>
+          <div class="pr"><label>Pola widzenia</label></div>
+          <select id="sVisionMode">
+            <option value="selected">Wybrany organizm</option>
+            <option value="all">Wszystkie</option>
+            <option value="none">Brak</option>
+          </select>
+          <div class="pr" style="margin-top:6px"><label>Tryb kolorów</label></div>
+          <select id="sColorMode">
+            <option value="genome">Kolor DNA</option>
+            <option value="energy">Energia</option>
+            <option value="age">Wiek</option>
+            <option value="species">Gatunek</option>
+            <option value="fitness">Fitness</option>
+            <option value="generation">Generacja</option>
+          </select>
+          <div class="pr" style="margin-top:6px"><label>Ślady</label><span class="v" id="vTrails">0</span></div>
+          <input type="range" id="sTrails" min="0" max="60" value="0" step="5">
+          <div class="pr"><label>Heatmapa terenu</label></div>
+          <select id="sHeatmap">
+            <option value="off">Wyłączona</option>
+            <option value="food">Jedzenie</option>
+            <option value="death">Zgony</option>
+            <option value="birth">Narodziny</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="center on" id="centerWrapper">
+      <div class="canvas-wrap">
+        <canvas id="worldCanvas"></canvas>
+        <div class="overlay-tl" id="chipsEl"></div>
+        <div class="overlay-br">
+          <div class="minimap">
+            <canvas id="minimapCanvas" width="280" height="200"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="viz-strip">
+        <div class="viz-cell">
+          <div class="vc-title">📈 Populacja</div>
+          <canvas id="chartPop"></canvas>
+        </div>
+        <div class="viz-cell">
+          <div class="vc-title">🧬 Ewolucja genomu</div>
+          <canvas id="chartGenome"></canvas>
+        </div>
+        <div class="viz-cell">
+          <div class="vc-title">🎯 Fitness &amp; różnorodność</div>
+          <canvas id="chartFit"></canvas>
+        </div>
+        <div class="viz-cell">
+          <div class="vc-title">🌐 Przestrzeń genomowa</div>
+          <canvas id="chartPCA"></canvas>
+        </div>
+        <div class="viz-cell">
+          <div class="vc-title">🌊 Rozkład genów</div>
+          <canvas id="chartViolin"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-right-wrapper on" id="rightWrapper">
+      <div class="right-panel">
+        <div class="tabs">
+          <div class="tab on">🔬 DNA</div>
+          <div class="tab">🏆 Top</div>
+          <div class="tab">🌳 Drzewo</div>
+          <div class="tab">📜 Log</div>
+        </div>
+        <div class="tab-content on" id="tab-inspector">
+          <div class="inspector-head">
+            <div class="i-orb" id="iOrb">🦠</div>
+            <div>
+              <div class="i-name" id="iName">Kliknij organizm</div>
+              <div class="i-sub" id="iSub">aby zobaczyć szczegóły DNA</div>
+            </div>
+          </div>
+          <div class="genome-grid" id="genomeGrid"></div>
+          <div class="nn-display">
+            <div class="nn-title">⚡ Sieć neuronowa (aktywacja na żywo)</div>
+            <canvas id="nnCanvas" height="140"></canvas>
+          </div>
+        </div>
+        <div class="tab-content" id="tab-leaderboard">
+          <div id="lbList" style="padding:6px 0"></div>
+        </div>
+        <div class="tab-content" id="tab-tree">
+          <div style="padding:6px 10px">
+            <div class="sec-title"><span class="dot"></span>Drzewo genealogiczne</div>
+            <canvas id="treeCanvas" height="340"></canvas>
+            <div style="font-size:9px;color:var(--txt3);margin-top:6px;line-height:1.5">
+              Każdy węzeł = organizm. Krawędź = rodzic–dziecko. Kolor = gatunek, rozmiar = fitness.
+            </div>
+          </div>
+        </div>
+        <div class="tab-content" id="tab-events">
+          <div class="evlog" id="evlogEl"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body></html>
+------MultipartBoundary--KeAmzSHy6x8A6gQ37naCMCWowYmrKsIAVYwVD8SLKh----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap
+
+@charset "utf-8";
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 500; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Inter; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 300; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 600; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD2OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD_OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD4OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD0OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD1OwGtT0rU3BE.woff2") format("woff2"); unicode-range: U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 700; font-display: swap; src: url("https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbV2o-flEEny0FZhsfKu5WU4xD7OwGtT0rU.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--KeAmzSHy6x8A6gQ37naCMCWowYmrKsIAVYwVD8SLKh----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-ab15e0b6-558a-44f7-9a95-84cbbb4bfe82@mhtml.blink
+
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root { --bg0: #07070f; --bg1: #0e0e1c; --bg2: #141428; --bg3: #1a1a35; --cyan: #00f0ff; --mag: #ff00aa; --grn: #00ff88; --org: #ff8800; --red: #ff3055; --yel: #ffe000; --txt: #e2e2f0; --txt2: #8888aa; --txt3: #44445a; --bdr: #1e1e38; }
+
+* { margin: 0px; padding: 0px; box-sizing: border-box; }
+
+html, body { width: 100%; height: 100%; background: var(--bg0); color: var(--txt); font-family: Inter, sans-serif; overflow: hidden; }
+
+.root { display: flex; flex-direction: column; height: 100vh; }
+
+.topbar { background: var(--bg1); border-bottom: 1px solid var(--bdr); display: flex; align-items: center; justify-content: space-between; padding: 6px 10px 4px; gap: 6px; z-index: 10; flex-wrap: wrap; }
+
+.logo-wrap { display: flex; flex-direction: column; }
+
+.logo { font-family: "JetBrains Mono", monospace; font-size: 14px; font-weight: 700; background-image: ; background-position-x: ; background-position-y: ; background-size: ; background-repeat: ; background-attachment: ; background-origin: ; background-color: ; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
+
+.logo-sub { font-size: 9px; color: var(--txt3); letter-spacing: 2px; text-transform: uppercase; margin-top: -2px; }
+
+.topbar-center { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+
+.phase-pill { font-family: "JetBrains Mono", monospace; font-size: 10px; padding: 3px 10px; border-radius: 20px; border: 1px solid var(--cyan); color: var(--cyan); letter-spacing: 2px; text-transform: uppercase; animation: 2s ease-in-out 0s infinite normal none running pillGlow; }
+
+@keyframes pillGlow { 
+  0%, 100% { box-shadow: rgba(0, 240, 255, 0.2) 0px 0px 6px; }
+  50% { box-shadow: rgba(0, 240, 255, 0.5) 0px 0px 22px; }
+}
+
+.counter { text-align: center; }
+
+.counter .num { font-family: "JetBrains Mono", monospace; font-size: 18px; font-weight: 700; color: var(--cyan); line-height: 1; }
+
+.counter .lbl { font-size: 8px; color: var(--txt3); text-transform: uppercase; letter-spacing: 1px; }
+
+.topbar-right { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+
+.spd { display: flex; gap: 3px; }
+
+.spd-btn { font-family: "JetBrains Mono", monospace; font-size: 9px; padding: 3px 7px; background: var(--bg2); border: 1px solid var(--bdr); border-radius: 3px; color: var(--txt2); cursor: pointer; transition: 0.15s; }
+
+.spd-btn.on { border-color: var(--cyan); color: var(--cyan); background: rgba(0, 240, 255, 0.08); }
+
+.btn { font-family: "JetBrains Mono", monospace; font-size: 9px; padding: 4px 9px; border: 1px solid var(--bdr); border-radius: 4px; background: var(--bg2); color: var(--txt); cursor: pointer; transition: 0.15s; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.btn:hover { border-color: var(--cyan); box-shadow: rgba(0, 240, 255, 0.2) 0px 0px 10px; }
+
+.btn-accent { border-color: var(--cyan); background: rgba(0, 240, 255, 0.08); }
+
+.btn-red { border-color: var(--red); color: var(--red); }
+
+.main { flex: 1 1 0%; display: grid; grid-template-columns: 260px minmax(0px, 1fr) 280px; min-height: 0px; }
+
+.panel { background: var(--bg1); overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--bdr) transparent; }
+
+.panel::-webkit-scrollbar { width: 3px; }
+
+.panel::-webkit-scrollbar-thumb { background: var(--bdr); border-radius: 2px; }
+
+.sec { padding: 10px 12px; border-bottom: 1px solid var(--bdr); }
+
+.sec-title { font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--txt3); margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+
+.sec-title .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--cyan); }
+
+.pr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+
+.pr label { font-size: 10px; color: var(--txt2); }
+
+.pr .v { font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--cyan); min-width: 34px; text-align: right; }
+
+input[type="range"] { appearance: none; width: 100%; height: 2px; background: var(--bdr); border-radius: 1px; outline: none; margin: 3px 0px; }
+
+input[type="range"]::-webkit-slider-thumb { appearance: none; width: 12px; height: 12px; background: var(--cyan); border-radius: 50%; cursor: pointer; box-shadow: rgba(0, 240, 255, 0.5) 0px 0px 6px; }
+
+select { width: 100%; padding: 4px 7px; background: var(--bg2); color: var(--txt); border: 1px solid var(--bdr); border-radius: 3px; font-family: "JetBrains Mono", monospace; font-size: 10px; outline: none; cursor: pointer; margin-top: 3px; }
+
+select:focus { border-color: var(--cyan); }
+
+.center { display: flex; flex-direction: column; min-width: 0px; min-height: 0px; background: var(--bg0); }
+
+.canvas-wrap { position: relative; flex: 1 1 0%; min-height: 0px; }
+
+#worldCanvas { width: 100%; height: 100%; display: block; }
+
+.overlay-tl { position: absolute; top: 6px; left: 6px; display: flex; flex-wrap: wrap; gap: 4px; pointer-events: none; }
+
+.overlay-br { position: absolute; bottom: 6px; right: 6px; pointer-events: none; }
+
+.minimap { background: rgba(7, 7, 15, 0.85); border: 1px solid rgba(0, 240, 255, 0.2); border-radius: 6px; overflow: hidden; backdrop-filter: blur(8px); width: 140px; height: 100px; }
+
+#minimapCanvas { width: 100%; height: 100%; }
+
+.viz-strip { background: var(--bg1); border-top: 1px solid var(--bdr); display: grid; grid-template-columns: repeat(5, minmax(0px, 1fr)); gap: 1px; min-height: 120px; max-height: 180px; }
+
+.viz-cell { padding: 6px 8px; position: relative; overflow: hidden; }
+
+.viz-cell .vc-title { font-family: "JetBrains Mono", monospace; font-size: 8px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--txt3); margin-bottom: 4px; }
+
+.viz-cell canvas { width: 100%; height: calc(100% - 16px); display: block; }
+
+.right-panel { display: flex; flex-direction: column; background: var(--bg1); border-left: 1px solid var(--bdr); }
+
+.tabs { display: flex; border-bottom: 1px solid var(--bdr); }
+
+.tab { flex: 1 1 0%; font-family: "JetBrains Mono", monospace; font-size: 9px; padding: 7px 2px; text-align: center; letter-spacing: 1px; text-transform: uppercase; color: var(--txt3); cursor: pointer; transition: 0.15s; border-bottom: 2px solid transparent; }
+
+.tab.on { color: var(--cyan); border-bottom-color: var(--cyan); }
+
+.tab-content { display: none; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--bdr) transparent; flex: 1 1 0%; }
+
+.tab-content.on { display: block; }
+
+.inspector-head { padding: 10px; display: flex; align-items: center; gap: 8px; }
+
+.i-orb { width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--cyan); display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+
+.i-name { font-family: "JetBrains Mono", monospace; font-size: 12px; font-weight: 600; }
+
+.i-sub { font-size: 9px; color: var(--txt3); margin-top: 2px; }
+
+.genome-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 0px 10px 10px; }
+
+.gene { background: var(--bg2); border-radius: 3px; padding: 5px 6px; position: relative; overflow: hidden; }
+
+.gene .gene-fill { position: absolute; left: 0px; top: 0px; bottom: 0px; opacity: 0.12; border-radius: 3px; }
+
+.gene .g-label { font-size: 8px; color: var(--txt3); text-transform: uppercase; letter-spacing: 0.5px; }
+
+.gene .g-val { font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--txt); margin-top: 1px; }
+
+.nn-display { padding: 0px 10px 10px; }
+
+.nn-title { font-family: "JetBrains Mono", monospace; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; color: var(--txt3); margin-bottom: 4px; }
+
+#nnCanvas { width: 100%; border: 1px solid var(--bdr); border-radius: 3px; background: var(--bg2); }
+
+.lb-item { display: flex; align-items: center; gap: 6px; padding: 6px 10px; cursor: pointer; transition: background 0.15s; }
+
+.lb-item:hover { background: var(--bg2); }
+
+.lb-rank { font-family: "JetBrains Mono", monospace; font-size: 9px; color: var(--txt3); width: 20px; }
+
+.lb-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+.lb-info { flex: 1 1 0%; min-width: 0px; }
+
+.lb-name { font-family: "JetBrains Mono", monospace; font-size: 9px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.lb-meta { font-size: 8px; color: var(--txt3); }
+
+.lb-score { font-family: "JetBrains Mono", monospace; font-size: 10px; color: var(--grn); }
+
+.evlog { padding: 6px 10px; font-family: "JetBrains Mono", monospace; font-size: 9px; }
+
+.evlog .ev { margin-bottom: 3px; line-height: 1.4; }
+
+.evlog .t { color: var(--txt3); }
+
+#treeCanvas { width: 100%; border-radius: 3px; background: var(--bg2); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px 10px; }
+
+.chip { font-family: "JetBrains Mono", monospace; font-size: 9px; padding: 3px 7px; background: var(--bg2); border: 1px solid var(--bdr); border-radius: 3px; display: flex; align-items: center; gap: 4px; }
+
+.chip .cd { width: 5px; height: 5px; border-radius: 50%; }
+
+.intro { position: fixed; inset: 0px; background: var(--bg0); z-index: 9999; display: flex; align-items: center; justify-content: center; transition: opacity 0.8s, visibility 0.8s; }
+
+.intro.gone { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.intro-box { text-align: center; max-width: 600px; padding: 32px; }
+
+.intro-icon { font-size: 60px; animation: 3s ease-in-out 0s infinite normal none running float; margin-bottom: 16px; }
+
+@keyframes float { 
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.intro-title { font-family: "JetBrains Mono", monospace; font-size: 26px; font-weight: 700; background-image: ; background-position-x: ; background-position-y: ; background-size: ; background-repeat: ; background-attachment: ; background-origin: ; background-color: ; background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 3px; margin-bottom: 10px; }
+
+.intro-desc { color: var(--txt2); font-size: 12px; line-height: 1.7; margin-bottom: 20px; }
+
+.intro-feats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 22px; text-align: left; }
+
+.feat { display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--txt2); padding: 6px 10px; background: var(--bg1); border: 1px solid var(--bdr); border-radius: 4px; }
+
+.feat .fi { font-size: 14px; }
+
+.btn-launch { font-family: "JetBrains Mono", monospace; font-size: 12px; padding: 10px 34px; background: linear-gradient(135deg, var(--cyan), var(--mag)); color: rgb(0, 0, 0); border: none; border-radius: 7px; cursor: pointer; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; transition: transform 0.2s, box-shadow 0.2s; }
+
+.btn-launch:hover { transform: scale(1.04); box-shadow: rgba(0, 240, 255, 0.3) 0px 0px 30px, rgba(255, 0, 170, 0.3) 0px 0px 30px; }
+
+@media (max-width: 1024px) {
+  .main { grid-template-columns: 220px minmax(0px, 1fr); grid-template-rows: 1fr 220px; }
+  .right-panel { grid-area: 2 / 1 / 3 / -1; border-left: none; border-top: 1px solid var(--bdr); }
+}
+
+@media (max-width: 768px) {
+  .topbar { flex-wrap: wrap; row-gap: 4px; }
+  .topbar-center { order: 3; width: 100%; justify-content: space-between; }
+  .topbar-right { order: 2; }
+  .logo-wrap { order: 1; }
+  .main { grid-template-columns: 1fr; grid-template-rows: auto minmax(0px, 1fr) auto; }
+  .panel-left-wrapper, .panel-right-wrapper { display: none; }
+  .panel-left-wrapper.on, .panel-right-wrapper.on { display: block; overflow-y: auto; }
+  .center { min-height: 0px; }
+  .viz-strip { grid-template-columns: repeat(2, minmax(0px, 1fr)); grid-auto-rows: 120px; max-height: none; }
+  .minimap { width: 120px; height: 90px; }
+  .mobile-toggle { display: flex; gap: 4px; padding: 4px 6px; border-bottom: 1px solid var(--bdr); background: var(--bg1); }
+  .mobile-toggle button { flex: 1 1 0%; font-family: "JetBrains Mono", monospace; font-size: 9px; padding: 4px 6px; border-radius: 4px; border: 1px solid var(--bdr); background: var(--bg2); color: var(--txt2); cursor: pointer; }
+  .mobile-toggle button.on { border-color: var(--cyan); color: var(--cyan); background: rgba(0, 240, 255, 0.08); }
+}
+
+@media (max-width: 480px) {
+  .intro-box { padding: 20px; }
+  .intro-feats { grid-template-columns: 1fr; }
+  .counter .num { font-size: 14px; }
+  .spd { flex-wrap: wrap; }
+}
+------MultipartBoundary--KeAmzSHy6x8A6gQ37naCMCWowYmrKsIAVYwVD8SLKh------
